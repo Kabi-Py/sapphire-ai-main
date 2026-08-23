@@ -4,9 +4,47 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
     />
     <title>Sapphire AI</title>
+    
+    <!-- Agentic SEO & Metadata Signals -->
+    <link rel="canonical" href="https://sapphire-ai.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://sapphire-ai.netlify.app/og-image.jpg" />
+    <meta property="og:title" content="Sapphire AI" />
+    <meta property="og:description" content="Experience Sapphire AI - Intelligence Unleashed." />
+
+    <!-- JSON-LD Structured Data for AI & Search Entities -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Sapphire AI",
+          "url": "https://sapphire-ai.netlify.app",
+          "description": "A custom AI assistant providing conversational intelligence, code generation, and automated tasks.",
+          "applicationCategory": "UtilitiesApplication"
+        },
+        {
+          "@type": "Organization",
+          "name": "Sapphire AI",
+          "url": "https://sapphire-ai.netlify.app",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@sapphire-ai.netlify.app",
+            "contactType": "customer support"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "PK"
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- Tailwind CSS & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,6 +81,7 @@
               "ambient-red": "redDrift 14s ease-in-out infinite alternate",
               "ambient-purple": "purpleDrift 16s ease-in-out infinite alternate",
               "ambient-center": "centerPulse 10s ease-in-out infinite alternate",
+              "fade-in": "fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards",
             },
             keyframes: {
               floatAnim: {
@@ -68,16 +107,17 @@
                 "50%": { transform: "translate3d(40px, -30px, 0) scale(1.25)", opacity: 0.35 },
                 "100%": { transform: "translate3d(-30px, 40px, 0) scale(0.95)", opacity: 0.2 },
               },
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(15px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
             },
           },
         },
       };
     </script>
     <style>
-      /* Global resets & text selection prevention */
-      * {
-        box-sizing: border-box;
-      }
+      * { box-sizing: border-box; }
       body {
         margin: 0;
         padding: 0;
@@ -88,7 +128,7 @@
         user-select: none;
       }
 
-      /* Completely hide native scrollbars across all browsers */
+      /* Hide native scrollbars */
       html, body {
         scrollbar-width: none;
         -ms-overflow-style: none;
@@ -98,145 +138,347 @@
         width: 0px;
         background: transparent;
       }
+      
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
 
-      /* Logo & Text Gradient: Perfectly matched to the logo icon (Vibrant Red -> Rich Magenta -> Deep Purple) */
+      /* Gradients & Cards */
       .logo-gradient {
         background: linear-gradient(135deg, #ff1744 0%, #e91e63 45%, #8e24aa 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-wrap: balance;
       }
-
       .badge-box {
         background: linear-gradient(135deg, rgba(255, 23, 68, 0.2) 0%, rgba(142, 36, 170, 0.2) 100%);
         border: 1px solid rgba(142, 36, 170, 0.35);
       }
-
-      /* Parallax scene perspective */
-      .parallax-scene {
-        perspective: 1400px;
-      }
+      .parallax-scene { perspective: 1400px; }
       .parallax-card {
         transform-style: preserve-3d;
         transition: transform 0.25s cubic-bezier(0.03, 0.98, 0.52, 0.99);
         will-change: transform;
       }
+
+      /* Unified Navigation Styles */
+      .nav-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.4rem 0.8rem;
+        border-radius: 9999px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        color: #d1d5db;
+        cursor: pointer;
+        line-height: 1.25rem;
+        height: 2.15rem;
+        border: 1px solid transparent;
+      }
+      .nav-btn:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+      .nav-btn.active {
+        background-color: rgba(255, 255, 255, 0.15);
+        color: #fb7185;
+      }
+      
+      /* Download Button Harmonized Size & Style */
+      .btn-download {
+        background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(56, 189, 248, 0.05));
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        color: #38bdf8;
+        font-weight: 600;
+      }
+      .btn-download:hover {
+        background: rgba(56, 189, 248, 0.25);
+        color: #fff;
+        border-color: rgba(56, 189, 248, 0.6);
+      }
+      .btn-download.active {
+        background: rgba(56, 189, 248, 0.3);
+        color: #fff;
+        border-color: rgba(56, 189, 248, 0.8);
+      }
     </style>
   </head>
   <body class="text-gray-100 font-sans min-h-screen overflow-x-hidden relative">
-    <!-- Volumetric Live Background Lighting: Actively Animated Flowing Blobs -->
+    
+    <!-- AI Crawler / No-JS Fallback Content -->
+    <noscript>
+      <div style="padding: 2rem; background: #120618; color: #fff;">
+        <h1>Sapphire AI - Advanced Conversational Assistant</h1>
+        <p>Sapphire AI is a custom artificial intelligence application designed to help users solve problems, generate code, and analyze data efficiently.</p>
+      </div>
+    </noscript>
+
+    <!-- Volumetric Live Background Lighting -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none -z-50">
-      <!-- Top-Left Bright Red-Orange / Coral Pink Glow -->
       <div class="absolute -top-[5%] -left-[10%] w-[55vw] h-[55vw] rounded-full bg-[#ff1744]/35 blur-[130px] animate-ambient-red"></div>
-      <!-- Center Hot Pink Transition Glow -->
       <div class="absolute top-[25%] left-[20%] w-[50vw] h-[50vw] rounded-full bg-[#e91e63]/25 blur-[150px] animate-ambient-center"></div>
-      <!-- Bottom-Right Deep Purple Glow -->
       <div class="absolute -bottom-[5%] -right-[10%] w-[55vw] h-[55vw] rounded-full bg-[#8e24aa]/40 blur-[140px] animate-ambient-purple"></div>
-      <!-- Enhanced Center Vignette Overlay to guarantee perfect text contrast -->
       <div class="absolute inset-0 bg-radial from-[#120618]/20 via-[#120618]/60 to-[#120618]/90"></div>
     </div>
+
+    <!-- Responsive Glassmorphic Header -->
+    <nav class="fixed top-0 left-0 w-full z-[100] bg-surface-950/60 backdrop-blur-xl border-b border-white/10 shadow-lg">
+      <div class="max-w-6xl mx-auto px-3 sm:px-6 h-16 flex items-center justify-between gap-2">
+        <!-- Logo Area -->
+        <div class="font-display font-extrabold text-lg sm:text-2xl tracking-tight logo-gradient flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0" onclick="switchTab('home')">
+          <img src="https://avatars.githubusercontent.com/u/246972150?v=4&size=460" alt="Sapphire AI Logo" class="w-7 h-7 sm:w-9 sm:h-9 rounded-full shadow-lg border border-white/10 pointer-events-none" draggable="false" />
+          <span>Sapphire</span>
+        </div>
+        
+        <!-- Navigation Links -->
+        <div class="flex items-center gap-1 sm:gap-2 overflow-x-auto no-scrollbar py-1">
+          <button onclick="switchTab('home')" id="btn-home" class="nav-btn active text-[13px] sm:text-sm whitespace-nowrap">Home</button>
+          <button onclick="scrollToDownload()" id="btn-download" class="nav-btn btn-download text-[13px] sm:text-sm whitespace-nowrap">
+            <i class="fa-solid fa-arrow-down mr-1.5 text-[11px]"></i>Download
+          </button>
+          <button onclick="switchTab('about')" id="btn-about" class="nav-btn text-[13px] sm:text-sm whitespace-nowrap">About</button>
+          <button onclick="switchTab('privacy')" id="btn-privacy" class="nav-btn text-[13px] sm:text-sm whitespace-nowrap">Privacy</button>
+          <button onclick="switchTab('contact')" id="btn-contact" class="nav-btn text-[13px] sm:text-sm whitespace-nowrap">Contact</button>
+        </div>
+      </div>
+    </nav>
 
     <!-- Custom Fading Overlay Scrollbar -->
     <div id="custom-scrollbar" class="fixed right-0 top-0 bottom-0 w-2 z-50 pointer-events-none opacity-0 transition-opacity duration-300">
       <div id="custom-thumb" class="w-1.5 absolute right-0 rounded-full" style="background: linear-gradient(180deg, rgba(255, 23, 68, 0) 0%, rgba(255, 23, 68, 0.9) 25%, rgba(233, 30, 99, 0.9) 50%, rgba(142, 36, 170, 0.9) 75%, rgba(142, 36, 170, 0) 100%);"></div>
     </div>
 
-    <!-- Section 1: Hero Section -->
-    <section id="hero-section" class="relative h-screen w-full flex flex-col items-center justify-between py-10 px-4 z-10 overflow-hidden">
-      <!-- Top Balance Spacer -->
-      <div class="w-full h-10 pointer-events-none opacity-0"></div>
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="w-full">
+      
+      <!-- ================= HOME TAB ================= -->
+      <div id="tab-home" class="tab-pane block w-full animate-fade-in">
+        <!-- Section 1: Hero Section -->
+        <section id="hero-section" class="relative h-screen w-full flex flex-col items-center justify-between py-10 px-4 z-10 overflow-hidden">
+          <div class="w-full h-10 pointer-events-none opacity-0"></div>
+          <div id="hero-content" class="w-full max-w-4xl mx-auto space-y-5 text-center will-change-transform transition-transform duration-75 my-auto">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-box text-xs sm:text-sm font-semibold tracking-wider uppercase text-white shadow-xl mx-auto mt-10">
+              <i class="fa-solid fa-sparkles text-rose-400"></i> Intelligence Unleashed
+            </div>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold logo-gradient tracking-tight leading-[1.1] py-2" style="filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.85));">
+              Experience Sapphire AI
+            </h1>
+          </div>
+          <div id="scroll-indicator" class="flex flex-col items-center text-center gap-2 text-gray-300 animate-bounce-slow pointer-events-none transition-opacity duration-150 h-10 pb-2">
+            <span class="text-xs uppercase tracking-widest font-semibold">Scroll Down</span>
+            <i class="fa-solid fa-chevron-down text-sm"></i>
+          </div>
+        </section>
 
-      <!-- Hero Content -->
-      <div id="hero-content" class="w-full max-w-4xl mx-auto space-y-5 text-center will-change-transform transition-transform duration-75 my-auto">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-box text-xs sm:text-sm font-semibold tracking-wider uppercase text-white shadow-xl mx-auto">
-          <i class="fa-solid fa-sparkles text-rose-400"></i> Intelligence Unleashed
-        </div>
-        <h1 class="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold logo-gradient tracking-tight leading-[1.1] py-2" style="filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.85));">
-          Experience Sapphire AI
-        </h1>
+        <!-- Section 2: Download Card Section -->
+        <section id="download-section" class="relative min-h-screen flex items-center justify-center p-4 z-10 pb-20">
+          <div id="card-entrance-wrapper" class="w-full max-w-md will-change-transform transition-transform duration-75 opacity-0 relative">
+            <div class="absolute -inset-3 bg-gradient-to-r from-rose-500/35 via-purple-600/35 to-purple-800/35 rounded-[48px] blur-3xl animate-pulse-slow pointer-events-none -z-10"></div>
+            <div class="parallax-scene w-full">
+              <div id="parallax-card" class="parallax-card text-center space-y-6 p-8 sm:p-10 rounded-[36px] bg-surface-900/80 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-purple-950/60 text-white">
+                <div style="transform: translateZ(25px);">
+                  <img src="https://avatars.githubusercontent.com/u/246972150?v=4&size=460" alt="Sapphire Logo" class="w-24 h-24 mx-auto mb-4 rounded-full shadow-2xl animate-float pointer-events-none" draggable="false" />
+                  <h2 class="text-3xl sm:text-4xl font-display font-extrabold logo-gradient pb-1" style="filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.7));">Sapphire AI</h2>
+                </div>
+                <div style="transform: translateZ(35px);" class="space-y-4">
+                  <button type="button" onclick="window.open('https://sapphire-ai-web.netlify.app/', '_blank');" class="w-full py-4 px-6 bg-surface-800/90 hover:bg-surface-700 text-white font-bold rounded-2xl shadow-lg transition-all duration-200 text-center flex items-center justify-center gap-2.5 border border-white/15 group active:scale-95 cursor-pointer">
+                    <i class="fa-solid fa-globe text-xl group-hover:scale-110 transition-transform duration-300 text-rose-500" style="filter: drop-shadow(0 2px 8px rgba(255, 23, 68, 0.4));"></i>
+                    <span>Open Web App</span>
+                  </button>
+                  <div class="text-gray-200 text-sm font-medium tracking-wide">or</div>
+                  <p class="text-gray-100 text-sm sm:text-base font-medium">Download the app for your platform</p>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2" style="transform: translateZ(40px);">
+                  <button type="button" class="w-full sm:w-48 py-4 px-6 bg-surface-800/90 hover:bg-surface-700 text-white font-bold rounded-2xl shadow-lg transition-all duration-200 text-center flex items-center justify-center gap-2.5 border border-white/15 group active:scale-95 cursor-pointer">
+                    <i class="fa-brands fa-windows text-xl group-hover:scale-110 transition-transform duration-300 text-sky-400"></i> <span>Windows</span>
+                  </button>
+                  <button type="button" class="w-full sm:w-48 py-4 px-6 bg-surface-800/90 hover:bg-surface-700 text-white font-bold rounded-2xl shadow-lg transition-all duration-200 text-center flex items-center justify-center gap-2.5 border border-white/15 group active:scale-95 cursor-pointer">
+                    <i class="fa-brands fa-android text-xl group-hover:scale-110 transition-transform duration-300 text-emerald-400"></i> <span>Android</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
-      <!-- Scroll Down Indicator -->
-      <div id="scroll-indicator" class="flex flex-col items-center text-center gap-2 text-gray-300 animate-bounce-slow pointer-events-none transition-opacity duration-150 h-10 pb-2">
-        <span class="text-xs uppercase tracking-widest font-semibold">Scroll Down</span>
-        <i class="fa-solid fa-chevron-down text-sm"></i>
-      </div>
-    </section>
-
-    <!-- Section 2: Download & Web App Card Section -->
-    <section class="relative min-h-screen flex items-center justify-center p-4 z-10 pb-20">
-      <div id="card-entrance-wrapper" class="w-full max-w-md will-change-transform transition-transform duration-75 opacity-0 relative">
-        <!-- Living Ambient Energy Aura Behind the Card -->
-        <div class="absolute -inset-3 bg-gradient-to-r from-rose-500/35 via-purple-600/35 to-purple-800/35 rounded-[48px] blur-3xl animate-pulse-slow pointer-events-none -z-10"></div>
-
-        <div class="parallax-scene w-full">
-          <div
-            id="parallax-card"
-            class="parallax-card text-center space-y-6 p-8 sm:p-10 rounded-[36px] bg-surface-900/80 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-purple-950/60 text-white"
-          >
-            <div style="transform: translateZ(25px);">
-              <img
-                src="https://avatars.githubusercontent.com/u/246972150?v=4&size=460"
-                alt="Sapphire Logo"
-                class="w-24 h-24 mx-auto mb-4 rounded-full shadow-2xl animate-float pointer-events-none"
-                draggable="false"
-              />
-              <h2 class="text-3xl sm:text-4xl font-display font-extrabold logo-gradient pb-1" style="filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.7));">
-                Sapphire AI
-              </h2>
-            </div>
-
-            <div style="transform: translateZ(35px);" class="space-y-4">
-              <!-- Web App Button -->
-              <button
-                type="button"
-                onclick="window.open('https://sapphire-ai-web.netlify.app/', '_blank');"
-                class="w-full py-4 px-6 bg-surface-800/90 hover:bg-surface-700 text-white font-bold rounded-2xl shadow-lg transition-all duration-200 text-center flex items-center justify-center gap-2.5 border border-white/15 group active:scale-95 cursor-pointer"
-              >
-                <i class="fa-solid fa-globe text-xl group-hover:scale-110 transition-transform duration-300 text-rose-500" style="filter: drop-shadow(0 2px 8px rgba(255, 23, 68, 0.4));"></i>
-                <span>Open Web App</span>
-              </button>
-
-              <!-- Pure White "or" text -->
-              <div class="text-gray-200 text-sm font-medium tracking-wide">or</div>
-
-              <!-- Download Heading -->
-              <p class="text-gray-100 text-sm sm:text-base font-medium">
-                Download the app for your platform
-              </p>
-            </div>
-
-            <div
-              class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2"
-              style="transform: translateZ(40px);"
-            >
-              <!-- Windows Download Button -->
-              <button
-                type="button"
-                onclick="/* Add Windows download action here */"
-                class="w-full sm:w-48 py-4 px-6 bg-surface-800/90 hover:bg-surface-700 text-white font-bold rounded-2xl shadow-lg transition-all duration-200 text-center flex items-center justify-center gap-2.5 border border-white/15 group active:scale-95 cursor-pointer"
-              >
-                <i class="fa-brands fa-windows text-xl group-hover:scale-110 transition-transform duration-300 text-sky-400" style="filter: drop-shadow(0 2px 8px rgba(56, 189, 248, 0.4));"></i>
-                <span>Windows</span>
-              </button>
-
-              <!-- Android Download Button -->
-              <button
-                type="button"
-                onclick="/* Add Android download action here */"
-                class="w-full sm:w-48 py-4 px-6 bg-surface-800/90 hover:bg-surface-700 text-white font-bold rounded-2xl shadow-lg transition-all duration-200 text-center flex items-center justify-center gap-2.5 border border-white/15 group active:scale-95 cursor-pointer"
-              >
-                <i class="fa-brands fa-android text-xl group-hover:scale-110 transition-transform duration-300 text-emerald-400" style="filter: drop-shadow(0 2px 8px rgba(52, 211, 153, 0.4));"></i>
-                <span>Android</span>
-              </button>
+      <!-- ================= ABOUT TAB ================= -->
+      <div id="tab-about" class="tab-pane hidden w-full animate-fade-in">
+        <div class="min-h-screen flex flex-col items-center justify-center p-4 pt-28 pb-20 z-10">
+          <div class="w-full max-w-3xl relative">
+            <div class="absolute -inset-3 bg-gradient-to-r from-rose-500/35 via-purple-600/35 to-purple-800/35 rounded-[48px] blur-3xl animate-pulse-slow pointer-events-none -z-10"></div>
+            <div class="p-8 sm:p-12 rounded-[36px] bg-surface-900/80 backdrop-blur-3xl border border-white/15 shadow-2xl text-white space-y-6">
+              <h1 class="text-3xl sm:text-5xl font-display font-extrabold logo-gradient pb-2">About Sapphire AI</h1>
+              <div class="space-y-4 text-gray-300 leading-relaxed text-sm sm:text-base font-medium">
+                <p>Sapphire AI is a state-of-the-art conversational intelligence platform built to redefine how humans interact with machines. Originating from a passion for advanced neural networks and seamless user experiences, Sapphire AI has grown into a robust ecosystem designed for developers, creators, and everyday users alike.</p>
+                <p>Our primary goal is to democratize artificial intelligence by providing intuitive, lightning-fast interfaces that bridge the gap between complex algorithms and practical utility. Whether you are seeking assistance with intricate coding problems, drafting comprehensive essays, or analyzing extensive datasets, Sapphire AI is equipped to handle your needs.</p>
+                <p>Built leveraging cutting-edge machine learning frameworks and deployed on high-performance cloud infrastructure, we ensure that every interaction is not only accurate but delivered with unparalleled speed. We are constantly iterating, training new models, and expanding our feature set to provide the most powerful AI assistant available on Windows, Android, and the Web.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- ================= PRIVACY TAB ================= -->
+      <div id="tab-privacy" class="tab-pane hidden w-full animate-fade-in">
+        <div class="min-h-screen flex flex-col items-center justify-center p-4 pt-28 pb-20 z-10">
+          <div class="w-full max-w-3xl relative">
+            <div class="absolute -inset-3 bg-gradient-to-r from-rose-500/35 via-purple-600/35 to-purple-800/35 rounded-[48px] blur-3xl animate-pulse-slow pointer-events-none -z-10"></div>
+            <div class="p-8 sm:p-12 rounded-[36px] bg-surface-900/80 backdrop-blur-3xl border border-white/15 shadow-2xl text-white space-y-6">
+              <h1 class="text-3xl sm:text-5xl font-display font-extrabold logo-gradient pb-2">Privacy Policy</h1>
+              <div class="space-y-4 text-gray-300 leading-relaxed text-sm sm:text-base font-medium">
+                <p>At Sapphire AI, your privacy and data security are our utmost priorities. We fundamentally believe that your conversations and personal data belong solely to you. We employ industry-leading, end-to-end encryption protocols to secure all data in transit and at rest.</p>
+                <p>Our systems are designed with a privacy-first architecture; we do not sell your personal information, chat history, or usage metrics to third-party advertisers or data brokers under any circumstances. Interactions with our language models are processed securely across encrypted cloud networks.</p>
+                <p>While we may use anonymized, aggregated telemetry to improve system performance and reliability, you always retain full control over your account data. Users have the absolute right to request the deletion of their personal information and chat logs at any time through their account settings. By using our web platform or downloadable clients, you consent to our secure data handling practices as outlined in this comprehensive privacy policy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= CONTACT TAB ================= -->
+      <div id="tab-contact" class="tab-pane hidden w-full animate-fade-in">
+        <div class="min-h-screen flex flex-col items-center justify-center p-4 pt-28 pb-20 z-10">
+          <div class="w-full max-w-3xl relative">
+            <div class="absolute -inset-3 bg-gradient-to-r from-rose-500/35 via-purple-600/35 to-purple-800/35 rounded-[48px] blur-3xl animate-pulse-slow pointer-events-none -z-10"></div>
+            <div class="p-8 sm:p-12 rounded-[36px] bg-surface-900/80 backdrop-blur-3xl border border-white/15 shadow-2xl text-white space-y-6">
+              <h1 class="text-3xl sm:text-5xl font-display font-extrabold logo-gradient pb-2">Contact Us</h1>
+              <div class="space-y-4 text-gray-300 leading-relaxed text-sm sm:text-base font-medium">
+                <p>We believe that the best products are built through constant iteration and active community feedback. Whether you are a developer looking to integrate Sapphire AI into your own applications using our API, a business seeking enterprise-level solutions, or a user who has encountered an unexpected bug, our team is here to assist you.</p>
+                <p>You can reach out to our core development and support team directly via email at <span class="text-rose-400 font-bold select-all">contact@sapphire-ai.netlify.app</span>. For real-time community support, feature requests, and developer discussions, we highly encourage you to join our official networks.</p>
+                <p>We strive to respond to all technical support inquiries within 24 to 48 hours. When submitting a bug report, please include your operating system, application version, and a detailed description of the issue to help our engineers diagnose and resolve the problem as quickly as possible. Your insights are invaluable in shaping the future of Sapphire AI.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
 
     <script>
-      // Custom Fading Scrollbar & Alive Continuous Parallax Physics
+      // Disable browser's native scroll restoration so manual route scrolling works perfectly
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+
+      // === URL ROUTING & TAB MANAGEMENT ===
+      function getRouteFromPath() {
+        const path = window.location.pathname.replace(/^\/+/, '').toLowerCase();
+        if (['home', 'download', 'about', 'privacy', 'contact'].includes(path)) {
+          return path;
+        }
+        return 'home';
+      }
+
+      function switchTab(tabId, updateHistory = true) {
+        if (tabId === 'download') {
+          scrollToDownload(updateHistory);
+          return;
+        }
+
+        document.querySelectorAll('.tab-pane').forEach(tab => {
+          tab.classList.remove('block');
+          tab.classList.add('hidden');
+          tab.classList.remove('animate-fade-in');
+        });
+        
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+          btn.classList.remove('active');
+        });
+
+        const targetTab = document.getElementById('tab-' + tabId);
+        if (targetTab) {
+          targetTab.classList.remove('hidden');
+          targetTab.classList.add('block');
+          void targetTab.offsetWidth;
+          targetTab.classList.add('animate-fade-in');
+        }
+
+        const activeBtn = document.getElementById('btn-' + tabId);
+        if (activeBtn) activeBtn.classList.add('active');
+
+        if (updateHistory) {
+          const newPath = tabId === 'home' ? '/' : '/' + tabId;
+          history.pushState({ tab: tabId }, '', newPath);
+        }
+
+        window.scrollTo(0, 0);
+        window.dispatchEvent(new Event('scroll'));
+      }
+
+      function scrollToDownload(updateHistory = true) {
+        const homeTab = document.getElementById('tab-home');
+        
+        document.querySelectorAll('.tab-pane').forEach(tab => {
+          tab.classList.remove('block');
+          tab.classList.add('hidden');
+          tab.classList.remove('animate-fade-in');
+        });
+
+        if (homeTab) {
+          homeTab.classList.remove('hidden');
+          homeTab.classList.add('block');
+          void homeTab.offsetWidth; // Forces reflow
+        }
+
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        const downloadBtn = document.getElementById('btn-download');
+        if (downloadBtn) downloadBtn.classList.add('active');
+        
+        if (updateHistory) {
+          history.pushState({ tab: 'download' }, '', '/download');
+        }
+
+        const executeScroll = (behaviorType) => {
+          const downloadSec = document.getElementById('download-section');
+          if (downloadSec) {
+            const rect = downloadSec.getBoundingClientRect();
+            const targetY = rect.top + window.pageYOffset - 70; // 70px navbar offset
+            window.scrollTo({
+              top: targetY,
+              behavior: behaviorType
+            });
+          }
+        };
+
+        const scrollBehavior = updateHistory ? 'smooth' : 'auto';
+
+        requestAnimationFrame(() => {
+          executeScroll(scrollBehavior);
+        });
+        setTimeout(() => {
+          executeScroll(scrollBehavior);
+        }, 80);
+      }
+
+      // Handle browser back/forward buttons
+      window.addEventListener('popstate', () => {
+        const route = getRouteFromPath();
+        if (route === 'download') {
+          scrollToDownload(false);
+        } else {
+          switchTab(route, false);
+        }
+      });
+
+      // Initialize route on load
+      window.addEventListener('DOMContentLoaded', () => {
+        const initialRoute = getRouteFromPath();
+        if (initialRoute === 'download') {
+          scrollToDownload(false);
+        } else {
+          switchTab(initialRoute, false);
+        }
+      });
+
+      // === PARALLAX & SCROLL EFFECTS ===
       const customScrollbar = document.getElementById('custom-scrollbar');
       const customThumb = document.getElementById('custom-thumb');
       const heroContent = document.getElementById('hero-content');
@@ -249,39 +491,40 @@
         const scrollTop = window.scrollY;
         const windowHeight = window.innerHeight;
         const docHeight = document.documentElement.scrollHeight - windowHeight;
-        if (docHeight <= 0) return;
+        
+        if (docHeight > 0) {
+          const scrollFraction = scrollTop / docHeight;
+          const trackHeight = windowHeight;
+          const thumbHeight = Math.max(60, trackHeight * (windowHeight / document.documentElement.scrollHeight));
+          const thumbTravel = trackHeight - thumbHeight;
+          const thumbTop = scrollFraction * thumbTravel;
 
-        // 1. Custom Scrollbar Calculation
-        const scrollFraction = scrollTop / docHeight;
-        const trackHeight = windowHeight;
-        const thumbHeight = Math.max(60, trackHeight * (windowHeight / document.documentElement.scrollHeight));
-        const thumbTravel = trackHeight - thumbHeight;
-        const thumbTop = scrollFraction * thumbTravel;
+          customThumb.style.height = `${thumbHeight}px`;
+          customThumb.style.transform = `translate3d(0, ${thumbTop}px, 0)`;
 
-        customThumb.style.height = `${thumbHeight}px`;
-        customThumb.style.transform = `translate3d(0, ${thumbTop}px, 0)`;
-
-        // Fade in custom scrollbar on scroll
-        customScrollbar.style.opacity = '1';
-        clearTimeout(scrollHideTimeout);
-        scrollHideTimeout = setTimeout(() => {
-          customScrollbar.style.opacity = '0';
-        }, 700);
-
-        // 2. Cinematic Hero Parallax Transition
-        const heroHeight = heroSection.offsetHeight;
-        const progress = Math.min(1, Math.max(0, scrollTop / (heroHeight * 1.3)));
-
-        if (heroContent) {
-          heroContent.style.opacity = 1 - progress * 1.3;
-          heroContent.style.transform = `translate3d(0, ${-progress * 45}px, 0) scale(${1 - progress * 0.08})`;
-          heroContent.style.filter = `blur(${progress * 6}px)`;
-        }
-        if (scrollIndicator) {
-          scrollIndicator.style.opacity = 1 - progress * 3;
+          customScrollbar.style.opacity = '1';
+          clearTimeout(scrollHideTimeout);
+          scrollHideTimeout = setTimeout(() => {
+            customScrollbar.style.opacity = '0';
+          }, 700);
         }
 
-        // 3. Continuous Alive Card Entrance & Momentum Parallax
+        if (document.getElementById('tab-home').classList.contains('hidden')) return;
+
+        if (heroSection) {
+          const heroHeight = heroSection.offsetHeight;
+          const progress = Math.min(1, Math.max(0, scrollTop / (heroHeight * 1.3)));
+
+          if (heroContent) {
+            heroContent.style.opacity = 1 - progress * 1.3;
+            heroContent.style.transform = `translate3d(0, ${-progress * 45}px, 0) scale(${1 - progress * 0.08})`;
+            heroContent.style.filter = `blur(${progress * 6}px)`;
+          }
+          if (scrollIndicator) {
+            scrollIndicator.style.opacity = 1 - progress * 3;
+          }
+        }
+
         if (cardEntranceWrapper) {
           const cardStart = windowHeight * 0.05;
           const cardTransitionLength = windowHeight * 0.9;
@@ -301,7 +544,6 @@
         }
       }
 
-      // Optimized 60fps RequestAnimationFrame Handler
       let ticking = false;
       window.addEventListener("scroll", () => {
         if (!ticking) {
@@ -313,21 +555,18 @@
         }
       });
 
-      // Mouse Parallax Effect for the Card
       const card = document.getElementById("parallax-card");
-
       document.addEventListener("mousemove", (e) => {
+        if (document.getElementById('tab-home').classList.contains('hidden')) return;
         const xAxis = (window.innerWidth / 2 - e.clientX) / 90;
         const yAxis = (window.innerHeight / 2 - e.clientY) / 90;
-        card.style.transform = `rotateY(${xAxis}deg) rotateX(${-yAxis}deg)`;
+        if(card) card.style.transform = `rotateY(${xAxis}deg) rotateX(${-yAxis}deg)`;
       });
 
-      // Smooth reset when mouse leaves window
       document.addEventListener("mouseleave", () => {
-        card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        if (card) card.style.transform = `rotateY(0deg) rotateX(0deg)`;
       });
 
-      // Prevent right-click context menu
       document.addEventListener("contextmenu", (e) => e.preventDefault());
     </script>
   </body>
