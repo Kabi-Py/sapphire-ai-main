@@ -6,14 +6,42 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
     />
-    <title>Sapphire AI</title>
     
-    <!-- Agentic SEO & Metadata Signals -->
+    <!-- Primary SEO & Title -->
+    <title>Sapphire AI – Free Conversational AI & Code Assistant</title>
+    <meta name="description" content="Experience Sapphire AI: a powerful artificial intelligence assistant for code generation, conversational intelligence, and quick problem solving. Available for Web, Windows, and Android." />
+    <meta name="keywords" content="Sapphire AI, AI chatbot, artificial intelligence, code generator, free AI assistant, conversational AI, Sapphire assistant, machine learning app" />
+    <meta name="author" content="Sapphire AI" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="theme-color" content="#120618" />
+    
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://sapphire-ai.netlify.app/" />
+    
+    <!-- Google Search Console Ownership Verification -->
+    <meta name="google-site-verification" content="REPLACE_WITH_YOUR_GSC_VERIFICATION_CODE" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://avatars.githubusercontent.com/u/246972150?v=4&size=32" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://avatars.githubusercontent.com/u/246972150?v=4&size=180" />
+
+    <!-- Open Graph / Social Media Signals -->
+    <meta property="og:site_name" content="Sapphire AI" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sapphire-ai.netlify.app/" />
+    <meta property="og:title" content="Sapphire AI – Intelligence Unleashed | Conversational AI & Code Assistant" />
+    <meta property="og:description" content="Experience Sapphire AI: a custom AI assistant providing conversational intelligence, code generation, and automated task assistance." />
     <meta property="og:image" content="https://sapphire-ai.netlify.app/og-image.jpg" />
-    <meta property="og:title" content="Sapphire AI" />
-    <meta property="og:description" content="Experience Sapphire AI - Intelligence Unleashed." />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card Signals -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://sapphire-ai.netlify.app/" />
+    <meta name="twitter:title" content="Sapphire AI – Intelligence Unleashed" />
+    <meta name="twitter:description" content="Experience Sapphire AI: a custom AI assistant providing conversational intelligence, code generation, and automated task assistance." />
+    <meta name="twitter:image" content="https://sapphire-ai.netlify.app/og-image.jpg" />
 
     <!-- JSON-LD Structured Data for AI & Search Entities -->
     <script type="application/ld+json">
@@ -21,16 +49,33 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "SoftwareApplication",
+          "@type": "WebSite",
+          "@id": "https://sapphire-ai.netlify.app/#website",
+          "url": "https://sapphire-ai.netlify.app/",
           "name": "Sapphire AI",
-          "url": "https://sapphire-ai.netlify.app",
-          "description": "A custom AI assistant providing conversational intelligence, code generation, and automated tasks.",
-          "applicationCategory": "UtilitiesApplication"
+          "description": "Sapphire AI - Intelligence Unleashed. Free conversational AI and coding assistant.",
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://sapphire-ai.netlify.app/#application",
+          "name": "Sapphire AI",
+          "url": "https://sapphire-ai.netlify.app/",
+          "description": "A custom AI assistant providing conversational intelligence, code generation, and automated tasks across Windows, Android, and Web.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Windows, Android, Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
         },
         {
           "@type": "Organization",
+          "@id": "https://sapphire-ai.netlify.app/#organization",
           "name": "Sapphire AI",
-          "url": "https://sapphire-ai.netlify.app",
+          "url": "https://sapphire-ai.netlify.app/",
+          "logo": "https://avatars.githubusercontent.com/u/246972150?v=4&size=460",
           "contactPoint": {
             "@type": "ContactPoint",
             "email": "contact@sapphire-ai.netlify.app",
@@ -208,13 +253,13 @@
       }
     </style>
   </head>
-  <body class="text-gray-100 font-sans min-h-screen overflow-x-hidden relative">
+  <body class="text-gray-100 font-sans min-h-screen overflow-x-hidden relative flex flex-col justify-between">
     
     <!-- AI Crawler / No-JS Fallback Content -->
     <noscript>
       <div style="padding: 2rem; background: #120618; color: #fff;">
         <h1>Sapphire AI - Advanced Conversational Assistant</h1>
-        <p>Sapphire AI is a custom artificial intelligence application designed to help users solve problems, generate code, and analyze data efficiently.</p>
+        <p>Sapphire AI is a custom artificial intelligence application designed to help users solve problems, generate code, and analyze data efficiently across Web, Windows, and Android devices.</p>
       </div>
     </noscript>
 
@@ -227,11 +272,11 @@
     </div>
 
     <!-- Responsive Glassmorphic Header -->
-    <nav class="fixed top-0 left-0 w-full z-[100] bg-surface-950/60 backdrop-blur-xl border-b border-white/10 shadow-lg">
-      <div class="max-w-6xl mx-auto px-3 sm:px-6 h-16 flex items-center justify-between gap-2">
+    <header class="fixed top-0 left-0 w-full z-[100] bg-surface-950/60 backdrop-blur-xl border-b border-white/10 shadow-lg">
+      <nav class="max-w-6xl mx-auto px-3 sm:px-6 h-16 flex items-center justify-between gap-2" aria-label="Main Navigation">
         <!-- Logo Area -->
         <div class="font-display font-extrabold text-lg sm:text-2xl tracking-tight logo-gradient flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0" onclick="switchTab('home')">
-          <img src="https://avatars.githubusercontent.com/u/246972150?v=4&size=460" alt="Sapphire AI Logo" class="w-7 h-7 sm:w-9 sm:h-9 rounded-full shadow-lg border border-white/10 pointer-events-none" draggable="false" />
+          <img src="https://avatars.githubusercontent.com/u/246972150?v=4&size=460" alt="Sapphire AI Application Logo" class="w-7 h-7 sm:w-9 sm:h-9 rounded-full shadow-lg border border-white/10 pointer-events-none" draggable="false" />
           <span>Sapphire</span>
         </div>
         
@@ -245,8 +290,8 @@
           <button onclick="switchTab('privacy')" id="btn-privacy" class="nav-btn text-[13px] sm:text-sm whitespace-nowrap">Privacy</button>
           <button onclick="switchTab('contact')" id="btn-contact" class="nav-btn text-[13px] sm:text-sm whitespace-nowrap">Contact</button>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
     <!-- Custom Fading Overlay Scrollbar -->
     <div id="custom-scrollbar" class="fixed right-0 top-0 bottom-0 w-2 z-50 pointer-events-none opacity-0 transition-opacity duration-300">
@@ -254,7 +299,7 @@
     </div>
 
     <!-- MAIN CONTENT CONTAINER -->
-    <main class="w-full">
+    <main class="w-full flex-grow">
       
       <!-- ================= HOME TAB ================= -->
       <div id="tab-home" class="tab-pane block w-full animate-fade-in">
@@ -282,7 +327,7 @@
             <div class="parallax-scene w-full">
               <div id="parallax-card" class="parallax-card text-center space-y-6 p-8 sm:p-10 rounded-[36px] bg-surface-900/80 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-purple-950/60 text-white">
                 <div style="transform: translateZ(25px);">
-                  <img src="https://avatars.githubusercontent.com/u/246972150?v=4&size=460" alt="Sapphire Logo" class="w-24 h-24 mx-auto mb-4 rounded-full shadow-2xl animate-float pointer-events-none" draggable="false" />
+                  <img src="https://avatars.githubusercontent.com/u/246972150?v=4&size=460" alt="Sapphire AI Mobile and Desktop Client" class="w-24 h-24 mx-auto mb-4 rounded-full shadow-2xl animate-float pointer-events-none" draggable="false" />
                   <h2 class="text-3xl sm:text-4xl font-display font-extrabold logo-gradient pb-1" style="filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.7));">Sapphire AI</h2>
                 </div>
                 <div style="transform: translateZ(35px);" class="space-y-4">
@@ -309,56 +354,69 @@
 
       <!-- ================= ABOUT TAB ================= -->
       <div id="tab-about" class="tab-pane hidden w-full animate-fade-in">
-        <div class="min-h-screen flex flex-col items-center justify-center p-4 pt-28 pb-20 z-10">
+        <section class="min-h-screen flex flex-col items-center justify-center p-4 pt-28 pb-20 z-10">
           <div class="w-full max-w-3xl relative">
             <div class="absolute -inset-3 bg-gradient-to-r from-rose-500/35 via-purple-600/35 to-purple-800/35 rounded-[48px] blur-3xl animate-pulse-slow pointer-events-none -z-10"></div>
-            <div class="p-8 sm:p-12 rounded-[36px] bg-surface-900/80 backdrop-blur-3xl border border-white/15 shadow-2xl text-white space-y-6">
+            <article class="p-8 sm:p-12 rounded-[36px] bg-surface-900/80 backdrop-blur-3xl border border-white/15 shadow-2xl text-white space-y-6">
               <h1 class="text-3xl sm:text-5xl font-display font-extrabold logo-gradient pb-2">About Sapphire AI</h1>
               <div class="space-y-4 text-gray-300 leading-relaxed text-sm sm:text-base font-medium">
                 <p>Sapphire AI is a state-of-the-art conversational intelligence platform built to redefine how humans interact with machines. Originating from a passion for advanced neural networks and seamless user experiences, Sapphire AI has grown into a robust ecosystem designed for developers, creators, and everyday users alike.</p>
                 <p>Our primary goal is to democratize artificial intelligence by providing intuitive, lightning-fast interfaces that bridge the gap between complex algorithms and practical utility. Whether you are seeking assistance with intricate coding problems, drafting comprehensive essays, or analyzing extensive datasets, Sapphire AI is equipped to handle your needs.</p>
                 <p>Built leveraging cutting-edge machine learning frameworks and deployed on high-performance cloud infrastructure, we ensure that every interaction is not only accurate but delivered with unparalleled speed. We are constantly iterating, training new models, and expanding our feature set to provide the most powerful AI assistant available on Windows, Android, and the Web.</p>
               </div>
-            </div>
+            </article>
           </div>
-        </div>
+        </section>
       </div>
 
       <!-- ================= PRIVACY TAB ================= -->
       <div id="tab-privacy" class="tab-pane hidden w-full animate-fade-in">
-        <div class="min-h-screen flex flex-col items-center justify-center p-4 pt-28 pb-20 z-10">
+        <section class="min-h-screen flex flex-col items-center justify-center p-4 pt-28 pb-20 z-10">
           <div class="w-full max-w-3xl relative">
             <div class="absolute -inset-3 bg-gradient-to-r from-rose-500/35 via-purple-600/35 to-purple-800/35 rounded-[48px] blur-3xl animate-pulse-slow pointer-events-none -z-10"></div>
-            <div class="p-8 sm:p-12 rounded-[36px] bg-surface-900/80 backdrop-blur-3xl border border-white/15 shadow-2xl text-white space-y-6">
+            <article class="p-8 sm:p-12 rounded-[36px] bg-surface-900/80 backdrop-blur-3xl border border-white/15 shadow-2xl text-white space-y-6">
               <h1 class="text-3xl sm:text-5xl font-display font-extrabold logo-gradient pb-2">Privacy Policy</h1>
               <div class="space-y-4 text-gray-300 leading-relaxed text-sm sm:text-base font-medium">
                 <p>At Sapphire AI, your privacy and data security are our utmost priorities. We fundamentally believe that your conversations and personal data belong solely to you. We employ industry-leading, end-to-end encryption protocols to secure all data in transit and at rest.</p>
                 <p>Our systems are designed with a privacy-first architecture; we do not sell your personal information, chat history, or usage metrics to third-party advertisers or data brokers under any circumstances. Interactions with our language models are processed securely across encrypted cloud networks.</p>
                 <p>While we may use anonymized, aggregated telemetry to improve system performance and reliability, you always retain full control over your account data. Users have the absolute right to request the deletion of their personal information and chat logs at any time through their account settings. By using our web platform or downloadable clients, you consent to our secure data handling practices as outlined in this comprehensive privacy policy.</p>
               </div>
-            </div>
+            </article>
           </div>
-        </div>
+        </section>
       </div>
 
       <!-- ================= CONTACT TAB ================= -->
       <div id="tab-contact" class="tab-pane hidden w-full animate-fade-in">
-        <div class="min-h-screen flex flex-col items-center justify-center p-4 pt-28 pb-20 z-10">
+        <section class="min-h-screen flex flex-col items-center justify-center p-4 pt-28 pb-20 z-10">
           <div class="w-full max-w-3xl relative">
             <div class="absolute -inset-3 bg-gradient-to-r from-rose-500/35 via-purple-600/35 to-purple-800/35 rounded-[48px] blur-3xl animate-pulse-slow pointer-events-none -z-10"></div>
-            <div class="p-8 sm:p-12 rounded-[36px] bg-surface-900/80 backdrop-blur-3xl border border-white/15 shadow-2xl text-white space-y-6">
+            <article class="p-8 sm:p-12 rounded-[36px] bg-surface-900/80 backdrop-blur-3xl border border-white/15 shadow-2xl text-white space-y-6">
               <h1 class="text-3xl sm:text-5xl font-display font-extrabold logo-gradient pb-2">Contact Us</h1>
               <div class="space-y-4 text-gray-300 leading-relaxed text-sm sm:text-base font-medium">
                 <p>We believe that the best products are built through constant iteration and active community feedback. Whether you are a developer looking to integrate Sapphire AI into your own applications using our API, a business seeking enterprise-level solutions, or a user who has encountered an unexpected bug, our team is here to assist you.</p>
-                <p>You can reach out to our core development and support team directly via email at <span class="text-rose-400 font-bold select-all">contact@sapphire-ai.netlify.app</span>. For real-time community support, feature requests, and developer discussions, we highly encourage you to join our official networks.</p>
+                <p>You can reach out to our core development and support team directly via email at <a href="mailto:contact@sapphire-ai.netlify.app" class="text-rose-400 font-bold hover:underline select-all">contact@sapphire-ai.netlify.app</a>. For real-time community support, feature requests, and developer discussions, we highly encourage you to join our official networks.</p>
                 <p>We strive to respond to all technical support inquiries within 24 to 48 hours. When submitting a bug report, please include your operating system, application version, and a detailed description of the issue to help our engineers diagnose and resolve the problem as quickly as possible. Your insights are invaluable in shaping the future of Sapphire AI.</p>
               </div>
-            </div>
+            </article>
           </div>
-        </div>
+        </section>
       </div>
 
     </main>
+
+    <!-- Semantic Footer for SEO Crawlers -->
+    <footer class="w-full border-t border-white/10 bg-surface-950/80 py-6 px-4 text-center text-xs text-gray-400 z-10 relative">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>&copy; 2026 Sapphire AI. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="/" onclick="switchTab('home'); return false;" class="hover:text-white transition-colors">Home</a>
+          <a href="/about" onclick="switchTab('about'); return false;" class="hover:text-white transition-colors">About</a>
+          <a href="/privacy" onclick="switchTab('privacy'); return false;" class="hover:text-white transition-colors">Privacy</a>
+          <a href="/contact" onclick="switchTab('contact'); return false;" class="hover:text-white transition-colors">Contact</a>
+        </div>
+      </div>
+    </footer>
 
     <script>
       // Disable browser's native scroll restoration so manual route scrolling works perfectly
