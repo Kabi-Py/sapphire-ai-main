@@ -10,10 +10,20 @@
     <!-- Primary SEO & Title -->
     <title>Sapphire AI</title>
     <meta name="description" content="Experience Sapphire AI: a powerful artificial intelligence assistant for code generation, conversational intelligence, and quick problem solving. Available for Web, Windows, and Android." />
-    <meta name="keywords" content="Sapphire AI, AI chatbot, artificial intelligence, code generator, free AI assistant, conversational AI, Sapphire assistant, machine learning app, chat gpt, image generator" />
+    <meta name="keywords" content="Sapphire AI, sapphire ai, SapphireAi, sapphireai, SAPPHIRE AI, AI chatbot, artificial intelligence, code generator, free AI assistant, conversational AI, Sapphire assistant, machine learning app, chat gpt, image generator, AI code generator, free AI chatbot, conversational intelligence, AI assistant for coding, Flash AI mode, Ultra AI mode, Vercel AI app, Python AI assistant" />
     <meta name="author" content="Sapphire AI" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#0f0f11" />
+    
+    <!-- Open Graph Metadata Completeness -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sapphire AI - Intelligence Unleashed" />
+    <meta property="og:description" content="Experience Sapphire AI: a powerful artificial intelligence assistant for code generation, conversational intelligence, and quick problem solving." />
+    <meta property="og:url" content="https://sapphire-ai-main.vercel.app/" />
+    <meta property="og:image" content="https://sapphire-ai-main.vercel.app/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://sapphire-ai-main.vercel.app/" />
@@ -28,6 +38,41 @@
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="https://avatars.githubusercontent.com/u/246972150?v=4&size=32" />
     <link rel="apple-touch-icon" sizes="180x180" href="https://avatars.githubusercontent.com/u/246972150?v=4&size=180" />
+
+    <!-- JSON-LD Structured Data (SoftwareApplication & Organization) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Sapphire AI",
+      "url": "https://sapphire-ai-main.vercel.app/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web, Windows, Android",
+      "description": "A powerful artificial intelligence assistant tailored for code generation, multi-step reasoning, and quick problem-solving.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Sapphire AI",
+        "url": "https://sapphire-ai-main.vercel.app/",
+        "logo": "https://avatars.githubusercontent.com/u/246972150?v=4&size=180",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "support@sapphire-ai.com"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Karachi",
+          "addressRegion": "Sindh",
+          "addressCountry": "PK"
+        }
+      }
+    }
+    </script>
 
     <!-- Tailwind CSS & Font Awesome -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -316,9 +361,18 @@
 
     <!-- AI Crawler / No-JS Fallback Content -->
     <noscript>
-      <div style="padding: 2rem; background: #0f0f11; color: #fff;">
+      <div style="padding: 2rem; background: #0f0f11; color: #fff; max-width: 800px; margin: 0 auto; line-height: 1.6;">
         <h1>Sapphire AI - Advanced Conversational Assistant</h1>
-        <p>Sapphire AI is a custom artificial intelligence application designed to help users solve problems, generate code, and analyze data efficiently across Web, Windows, and Android devices.</p>
+        <p>Welcome to Sapphire AI. This is a custom artificial intelligence application designed to help users solve problems, generate code, and analyze data efficiently across multiple platforms.</p>
+        <h2>Capabilities and Features</h2>
+        <p>Sapphire AI offers two distinct modes of operation to tailor to your specific workload:</p>
+        <ul>
+          <li><strong>Flash Mode:</strong> Optimized for lightning-fast inference and minimal latency. It is perfect for quick lookups, instant code snippets, rapid brainstorming sessions, and everyday productivity tasks where speed is paramount.</li>
+          <li><strong>Ultra Mode:</strong> Engineered for advanced multi-step reasoning, deep context retention, and rigorous logical analysis. Use Ultra mode when tackling complex software architecture, intricate programming challenges, and comprehensive research.</li>
+        </ul>
+        <h2>Supported Platforms</h2>
+        <p>Sapphire AI is universally accessible. You can instantly launch our application via our web interface, or download native desktop and mobile clients for seamless integration into your workflow. We currently provide native support for Windows and Android operating systems.</p>
+        <p>Please enable JavaScript to view the full interactive, hardware-accelerated user interface and experience features like magnetic buttons, customizable cursors, and node-link particle backgrounds.</p>
       </div>
     </noscript>
 
@@ -451,7 +505,7 @@
                     <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
                   </svg>
                 </div>
-                <h4 class="font-display font-bold text-xl text-white">Flash</h4>
+                <h3 class="font-display font-bold text-xl text-white">Flash</h3>
                 <p class="text-sm text-slate-300 leading-relaxed font-normal">
                   Optimized for <strong class="text-white font-semibold">lightning-fast inference</strong> and minimal latency. Perfect for quick lookups, instant code snippets, rapid brainstorming sessions, and everyday productivity tasks without waiting.
                 </p>
@@ -473,7 +527,7 @@
                     <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path>
                   </svg>
                 </div>
-                <h4 class="font-display font-bold text-xl text-white">Ultra</h4>
+                <h3 class="font-display font-bold text-xl text-white">Ultra</h3>
                 <p class="text-sm text-slate-300 leading-relaxed font-normal">
                   Advanced <strong class="text-white font-semibold">multi-step reasoning</strong>, deep context retention, and rigorous logical analysis engineered for complex software architecture, intricate programming challenges, and comprehensive research.
                 </p>
