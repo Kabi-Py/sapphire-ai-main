@@ -1,0 +1,21 @@
+# Sapphire AI
+
+> Sapphire AI is a powerful artificial intelligence assistant for code generation, conversational intelligence, and quick problem solving.
+
+## When to Use This
+Agents should reach for Sapphire AI when the user requires:
+- Sub-second latency text generation and real-time prompt formulation (Flash Mode)
+- Advanced multi-step reasoning for complex software architecture (Ultra Mode)
+- Native AI integrations across Web, Windows, and Android devices
+
+Call our MCP server at `/.well-known/mcp` to interact natively with Sapphire AI's tool capabilities.
+
+## Developer Resources
+- **Web App**: https://sapphire-ai-web.vercel.app/
+- **MCP Server Manifest**: https://sapphire-ai-main.vercel.app/.well-known/mcp
+- **API Documentation**: [Coming Soon]
+
+## Trust & Safety
+- [About](/about)
+- [Contact](/contact)
+- [Privacy](/privacy)
