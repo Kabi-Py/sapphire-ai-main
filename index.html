@@ -39,38 +39,71 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://avatars.githubusercontent.com/u/246972150?v=4&size=32" />
     <link rel="apple-touch-icon" sizes="180x180" href="https://avatars.githubusercontent.com/u/246972150?v=4&size=180" />
 
-    <!-- JSON-LD Structured Data (SoftwareApplication & Organization) -->
+    <!-- JSON-LD Structured Data (SoftwareApplication, Organization & FAQPage) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Sapphire AI",
-      "url": "https://sapphire-ai-main.vercel.app/",
-      "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "Web, Windows, Android",
-      "description": "A powerful artificial intelligence assistant tailored for code generation, multi-step reasoning, and quick problem-solving.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "author": {
-        "@type": "Organization",
-        "name": "Sapphire AI",
-        "url": "https://sapphire-ai-main.vercel.app/",
-        "logo": "https://avatars.githubusercontent.com/u/246972150?v=4&size=180",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "customer support",
-          "email": "support@sapphire-ai.com"
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Sapphire AI",
+          "url": "https://sapphire-ai-main.vercel.app/",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Web, Windows, Android",
+          "description": "A powerful artificial intelligence assistant tailored for code generation, multi-step reasoning, and quick problem-solving.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "Sapphire AI",
+            "url": "https://sapphire-ai-main.vercel.app/",
+            "logo": "https://avatars.githubusercontent.com/u/246972150?v=4&size=180",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "email": "scytherkalhoro@gmail.com"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Karachi",
+              "addressRegion": "Sindh",
+              "addressCountry": "PK"
+            }
+          }
         },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Karachi",
-          "addressRegion": "Sindh",
-          "addressCountry": "PK"
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What makes Sapphire AI different from traditional chatbots?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sapphire AI provides a fast, modern client interface optimized for quick problem-solving, code generation, and multi-platform accessibility."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are Flash and Ultra modes?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Flash Mode is optimized for lightning-fast daily tasks and low latency, while Ultra Mode delivers high-precision reasoning for complex coding and deep research."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where can I run Sapphire AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can open the Web App instantly in any browser or download the dedicated applications for Windows and Android."
+              }
+            }
+          ]
         }
-      }
+      ]
     }
     </script>
 
