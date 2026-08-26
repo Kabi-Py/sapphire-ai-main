@@ -10,7 +10,7 @@
     <!-- Primary SEO & Title -->
     <title>Sapphire AI</title>
     <meta name="description" content="Experience Sapphire AI: a powerful artificial intelligence assistant for code generation, conversational intelligence, and quick problem solving. Available for Web, Windows, and Android." />
-    <meta name="keywords" content="Sapphire AI, AI chatbot, artificial intelligence, code generator, free AI assistant, conversational AI, Sapphire assistant, machine learning app, chat gpt, image generator, sapphire ai" />
+    <meta name="keywords" content="Sapphire AI, AI chatbot, artificial intelligence, code generator, free AI assistant, conversational AI, Sapphire assistant, machine learning app, chat gpt, image generator" />
     <meta name="author" content="Sapphire AI" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#0f0f11" />
@@ -19,7 +19,11 @@
     <link rel="canonical" href="https://sapphire-ai-main.vercel.app/" />
     
     <!-- Google Search Console Ownership Verification -->
-    <meta name="google-site-verification" content="REPLACE_WITH_YOUR_GSC_VERIFICATION_CODE" />
+    <meta name="google-site-verification" content="verified" />
+
+    <!-- Vercel Web Analytics & Speed Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="https://avatars.githubusercontent.com/u/246972150?v=4&size=32" />
@@ -122,13 +126,22 @@
         background-color: #0f0f11;
         overflow-x: hidden;
         cursor: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Force hide native cursors on buttons, links, and interactive elements */
+      button, a, input, select, textarea, [role="button"], .cursor-pointer {
+        cursor: none !important;
       }
 
       /* Native Scrollbar Hiding */
       html, body { scrollbar-width: none; -ms-overflow-style: none; }
       ::-webkit-scrollbar { display: none; }
 
-      /* Visual Utilities & Logo Gradient (Vibrant & Rich) */
+      /* Visual Utilities & Logo Gradient */
       .logo-gradient {
         background: linear-gradient(135deg, #ff1744 0%, #f43f5e 35%, #c084fc 70%, #a855f7 100%);
         -webkit-background-clip: text;
@@ -160,10 +173,6 @@
         box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(168, 85, 247, 0.35);
       }
 
-      /* ==========================================================
-         COMPONENT STYLES
-         ========================================================== */
-
       /* Header Frosted Glass Button Style */
       .header-btn {
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
@@ -180,7 +189,7 @@
         background-color: rgba(168, 85, 247, 0.1);
       }
 
-      /* 1. Download Card */
+      /* Download Card */
       .download-card {
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
         backdrop-filter: blur(40px) saturate(180%);
@@ -227,20 +236,12 @@
         background-color: rgba(168, 85, 247, 0.1);
       }
 
-      /* 2. Standard Icons */
-      .card-icon {
-        color: #a855f7;
-        transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-      .download-card .card-icon {
-        color: #ff1744;
-      }
-      .flash-card .card-icon {
-        color: #ff1744;
-      }
+      /* Icons */
+      .card-icon { color: #a855f7; transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+      .download-card .card-icon { color: #ff1744; }
 
-      /* 4. Download Card Web App Button */
-      .download-web-app-btn {
+      /* Action Buttons */
+      .download-web-app-btn, .download-btn {
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
         backdrop-filter: blur(40px) saturate(180%);
         -webkit-backdrop-filter: blur(40px) saturate(180%);
@@ -248,23 +249,7 @@
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(168, 85, 247, 0.15);
         transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
-      .download-web-app-btn:hover {
-        transform: translateY(-2px);
-        border-color: rgba(168, 85, 247, 0.85);
-        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(168, 85, 247, 0.35);
-        background-color: rgba(168, 85, 247, 0.1);
-      }
-
-      /* 5. Download Action Buttons (Windows/Android) */
-      .download-btn {
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
-        backdrop-filter: blur(40px) saturate(180%);
-        -webkit-backdrop-filter: blur(40px) saturate(180%);
-        border: 1px solid rgba(168, 85, 247, 0.4);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(168, 85, 247, 0.15);
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-      .download-btn:hover {
+      .download-web-app-btn:hover, .download-btn:hover {
         transform: translateY(-2px);
         border-color: rgba(168, 85, 247, 0.85);
         box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(168, 85, 247, 0.35);
@@ -301,7 +286,7 @@
         box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(168, 85, 247, 0.35);
       }
 
-      /* Seamless Blending Header Style with Bottom Fade-Out Mask on Background Only */
+      /* Navbar Blend */
       .navbar-blend {
         background: transparent !important;
         backdrop-filter: none !important;
@@ -320,7 +305,7 @@
         pointer-events: none;
       }
 
-      /* Custom Cursor Styles (Red Outer Circle Cursor, Purple Center Dot) */
+      /* Custom Cursor */
       #cursor-dot, #cursor-ring {
         pointer-events: none;
         position: fixed;
@@ -396,7 +381,7 @@
       </div>
     </noscript>
 
-    <!-- Scroll Progress Bar with Sapphire Gradient -->
+    <!-- Scroll Progress Bar -->
     <div id="scroll-progress" class="fixed top-0 left-0 h-1 z-[9500] transition-all duration-150 ease-out" style="width: 0%; background: linear-gradient(135deg, #ff1744 0%, #f43f5e 35%, #c084fc 70%, #a855f7 100%);"></div>
 
     <!-- Custom Cursor -->
@@ -412,13 +397,13 @@
     <!-- Navigation Bar -->
     <header id="navbar" class="fixed top-0 left-0 w-full z-[8000] transition-all duration-400 ease-out py-5 px-6">
       <nav class="max-w-6xl mx-auto flex items-center justify-between gap-4">
-        <!-- Logo (Red to Purple Gradient Text) -->
+        <!-- Logo -->
         <div class="font-display font-extrabold text-2xl tracking-tight logo-gradient flex items-center gap-3 cursor-pointer select-none flex-shrink-0" onclick="navigateTo('home')">
-          <img src="https://avatars.githubusercontent.com/u/246972150?v=4&size=460" alt="Logo" class="w-8 h-8 rounded-full object-cover" />
+          <img src="https://avatars.githubusercontent.com/u/246972150?v=4&size=460" alt="Sapphire Logo" class="w-8 h-8 rounded-full object-cover" />
           <span>Sapphire</span>
         </div>
         
-        <!-- Center Nav Links (Uniform Frosted Glass Header Buttons) -->
+        <!-- Center Nav Links -->
         <div class="hidden md:flex items-center gap-2">
           <button onclick="navigateTo('home')" class="magnetic-btn header-btn px-4 py-2 rounded-full text-sm font-medium text-white hover:text-rose-400">Home</button>
           <button onclick="navigateTo('download')" class="magnetic-btn header-btn px-4 py-2 rounded-full text-sm font-medium text-white hover:text-rose-400">Download</button>
@@ -426,9 +411,9 @@
           <button onclick="navigateTo('faq')" class="magnetic-btn header-btn px-4 py-2 rounded-full text-sm font-medium text-white hover:text-rose-400">FAQ</button>
         </div>
 
-        <!-- Right Action Button (Header Web App Button with Red Text & Outline) -->
+        <!-- Right Action Button -->
         <div class="flex-shrink-0">
-          <button onclick="window.open('https://sapphire-ai-main.vercel.app/', '_blank')" class="magnetic-btn badge-red-outline px-4 py-2 rounded-full text-sm font-medium text-rose-500 hover:text-rose-400 shadow-lg">Web App</button>
+          <button onclick="window.open('https://sapphire-ai-web.vercel.app/', '_blank')" class="magnetic-btn badge-red-outline px-4 py-2 rounded-full text-sm font-medium text-rose-500 hover:text-rose-400 shadow-lg">Web App</button>
         </div>
       </nav>
     </header>
@@ -439,7 +424,6 @@
       <!-- ================= HERO SECTION ================= -->
       <section id="home" class="min-h-[80vh] flex flex-col items-center justify-center relative px-4 text-center py-16">
         <div class="space-y-6 max-w-3xl mx-auto">
-          <!-- Intelligence Unleashed Badge -->
           <div class="reveal-text inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-red-outline text-xs font-semibold uppercase text-slate-200 tracking-wider shadow-md group">
             <i class="fa-solid fa-sparkles text-rose-500"></i> Intelligence Unleashed
           </div>
@@ -451,7 +435,6 @@
           </p>
 
           <div class="reveal-text pt-2 flex flex-wrap items-center justify-center gap-4">
-            <!-- Get Started Button -->
             <a href="#download" class="magnetic-btn px-7 py-3.5 rounded-2xl bg-gradient-to-r from-rose-600 to-rose-500 text-white font-bold shadow-lg shadow-rose-600/30 hover:from-rose-500 hover:to-rose-400 hover:shadow-rose-600/50 transition-all duration-300">
               Get Started
             </a>
@@ -473,17 +456,14 @@
           <div class="parallax-scene w-full">
             <div id="parallax-card" class="parallax-card download-card text-center space-y-6 p-8 sm:p-9 rounded-[32px] text-white">
               
-              <!-- Card Header -->
               <div style="transform: translateZ(25px);">
                 <img src="https://avatars.githubusercontent.com/u/246972150?v=4&size=460" alt="Sapphire AI Logo" class="w-20 h-20 mx-auto mb-4 rounded-full shadow-xl object-cover animate-float pointer-events-none" />
                 <h3 class="text-2xl font-display font-extrabold logo-gradient">Sapphire AI</h3>
                 <span class="inline-block text-xs font-mono text-slate-200 badge-purple-outline px-3 py-1 rounded-full mt-1.5"><i class="fa-solid fa-code card-icon mr-2.5"></i>v1.0 stable</span>
               </div>
 
-              <!-- Action Buttons -->
               <div style="transform: translateZ(35px);" class="space-y-3.5">
-                <!-- Web App Button -->
-                <button type="button" onclick="window.open('https://sapphire-ai-main.vercel.app/', '_blank')" class="magnetic-btn w-full py-3.5 px-6 download-web-app-btn text-white font-bold rounded-2xl transition-all duration-300 text-center flex items-center justify-center gap-2.5 active:scale-95 cursor-pointer shadow-md">
+                <button type="button" onclick="window.open('https://sapphire-ai-web.vercel.app/', '_blank')" class="magnetic-btn w-full py-3.5 px-6 download-web-app-btn text-white font-bold rounded-2xl transition-all duration-300 text-center flex items-center justify-center gap-2.5 active:scale-95 cursor-pointer shadow-md">
                   <i class="fa-solid fa-globe text-lg card-icon"></i>
                   <span>Web App</span>
                 </button>
@@ -502,7 +482,6 @@
                 </div>
               </div>
 
-              <!-- System Info Summary Card -->
               <div style="transform: translateZ(40px);" class="pt-3.5 border-t border-purple-500/30 text-xs text-slate-300 font-medium flex justify-between items-center px-1">
                 <span><i class="fa-solid fa-shield-halved card-icon mr-1"></i> <strong class="text-white font-semibold">Secure &amp; Verified</strong></span>
                 <span><i class="fa-solid fa-bolt mr-1" style="color: #eab308;"></i> <strong class="text-white font-semibold">Fast Response</strong></span>
@@ -521,7 +500,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-          <!-- Flash Mode Card -->
           <div class="reveal-text">
             <div class="flash-card p-6 sm:p-8 rounded-3xl transition-all duration-400 space-y-4 flex flex-col justify-between h-full group">
               <div class="space-y-4">
@@ -542,7 +520,6 @@
             </div>
           </div>
 
-          <!-- Ultra Mode Card -->
           <div class="reveal-text">
             <div class="ultra-card p-6 sm:p-8 rounded-3xl transition-all duration-400 space-y-4 flex flex-col justify-between h-full group">
               <div class="space-y-4">
@@ -575,10 +552,9 @@
         </div>
 
         <div class="w-full space-y-3.5">
-          <!-- Item 1 -->
           <div class="reveal-text">
             <div class="frosted-glass rounded-2xl overflow-hidden group">
-              <button onclick="toggleAccordion(this)" class="w-full p-5 sm:p-6 text-left font-semibold text-white group-hover:text-rose-500 flex justify-between items-center transition-colors cursor-pointer text-sm sm:text-base">
+              <button onclick="toggleAccordion(this)" aria-expanded="false" class="w-full p-5 sm:p-6 text-left font-semibold text-white group-hover:text-rose-500 flex justify-between items-center transition-colors cursor-pointer text-sm sm:text-base">
                 <span>What makes Sapphire AI different from traditional chatbots?</span>
                 <i class="fa-solid fa-chevron-down text-xs text-purple-400 group-hover:text-rose-500 transition-all duration-300"></i>
               </button>
@@ -588,10 +564,9 @@
             </div>
           </div>
 
-          <!-- Item 2 -->
           <div class="reveal-text">
             <div class="frosted-glass rounded-2xl overflow-hidden group">
-              <button onclick="toggleAccordion(this)" class="w-full p-5 sm:p-6 text-left font-semibold text-white group-hover:text-rose-500 flex justify-between items-center transition-colors cursor-pointer text-sm sm:text-base">
+              <button onclick="toggleAccordion(this)" aria-expanded="false" class="w-full p-5 sm:p-6 text-left font-semibold text-white group-hover:text-rose-500 flex justify-between items-center transition-colors cursor-pointer text-sm sm:text-base">
                 <span>What are Flash and Ultra modes?</span>
                 <i class="fa-solid fa-chevron-down text-xs text-purple-400 group-hover:text-rose-500 transition-all duration-300"></i>
               </button>
@@ -601,10 +576,9 @@
             </div>
           </div>
 
-          <!-- Item 3 -->
           <div class="reveal-text">
             <div class="frosted-glass rounded-2xl overflow-hidden group">
-              <button onclick="toggleAccordion(this)" class="w-full p-5 sm:p-6 text-left font-semibold text-white group-hover:text-rose-500 flex justify-between items-center transition-colors cursor-pointer text-sm sm:text-base">
+              <button onclick="toggleAccordion(this)" aria-expanded="false" class="w-full p-5 sm:p-6 text-left font-semibold text-white group-hover:text-rose-500 flex justify-between items-center transition-colors cursor-pointer text-sm sm:text-base">
                 <span>Where can I run Sapphire AI?</span>
                 <i class="fa-solid fa-chevron-down text-xs text-purple-400 group-hover:text-rose-500 transition-all duration-300"></i>
               </button>
@@ -625,7 +599,13 @@
 
     <!-- INTERACTIVE ENGINE JAVASCRIPT -->
     <script>
-      // 1. CANVAS PARTICLE NODE-LINK CONSTELLATION EFFECT (Balanced Red & Purple)
+      // Disable Right-Click and Copy/Cut/Selection Actions
+      document.addEventListener('contextmenu', e => e.preventDefault());
+      document.addEventListener('copy', e => e.preventDefault());
+      document.addEventListener('cut', e => e.preventDefault());
+      document.addEventListener('selectstart', e => e.preventDefault());
+
+      // 1. CANVAS PARTICLE NODE-LINK CONSTELLATION EFFECT
       const canvas = document.getElementById('bg-canvas');
       const ctx = canvas.getContext('2d');
       let width = canvas.width = window.innerWidth;
@@ -638,7 +618,6 @@
 
       const particles = [];
       const particleCount = Math.min(Math.floor((width * height) / 14000), 75);
-      
       const logoColors = ['#ff1744', '#f43f5e', '#fb7185', '#c084fc', '#a855f7', '#d8b4fe'];
 
       for (let i = 0; i < particleCount; i++) {
@@ -786,12 +765,15 @@
 
         document.querySelectorAll('#faq .max-h-0').forEach(item => {
           item.style.maxHeight = '0px';
-          const otherIcon = item.previousElementSibling.querySelector('i');
+          const otherBtn = item.previousElementSibling;
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+          const otherIcon = otherBtn.querySelector('i');
           if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
         });
 
         if (!isOpen) {
           content.style.maxHeight = content.scrollHeight + 'px';
+          button.setAttribute('aria-expanded', 'true');
           icon.style.transform = 'rotate(180deg)';
         }
       }
