@@ -1,0 +1,17 @@
+# Sapphire AI - Complete Technical Documentation
+
+## Overview
+Sapphire AI provides high-performance AI inference with dual operating modes (Flash and Ultra) designed for developers, engineers, and power users.
+
+## Operating Modes
+1. Flash Mode: Ultra-low latency responses optimized for real-time coding assistance and quick queries.
+2. Ultra Mode: Deep context reasoning engine for complex software architecture and multi-step problem solving.
+
+## Model Context Protocol (MCP) Integration
+Sapphire AI exposes a native Model Context Protocol server for direct agent tool calling.
+- Endpoint: https://sapphire-ai-main.vercel.app/.well-known/mcp
+- Transport: Streamable HTTP / JSON-RPC 2.0
+
+## Support & Contact
+- Email: support@sapphire-ai.com
+- Location: Karachi, Sindh, Pakistan
