@@ -1,19 +1,353 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>404 - Not Found | Sapphire AI</title>
-  <meta name="robots" content="noindex, follow">
-</head>
-<body style="font-family: monospace; padding: 2rem; background: #0f0f11; color: #a855f7;">
-  <h1>404 Not Found</h1>
-  <p>The requested path does not exist on Sapphire AI.</p>
-  <pre>
-# Agent Recovery Sitemap
-If you are an autonomous agent looking for resources, please check the following:
-- [Homepage](/)
-- [Agent Instructions & LLMs](/llms.txt)
-- [Web Application](https://sapphire-ai-web.vercel.app/)
-  </pre>
-</body>
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    
+    <!-- Primary SEO & Title -->
+    <title>404 - Not Found | Sapphire AI</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#0f0f11" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://avatars.githubusercontent.com/u/246972150?v=4&size=32" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://avatars.githubusercontent.com/u/246972150?v=4&size=180" />
+
+    <!-- Tailwind CSS & Font Awesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Inter"', "sans-serif"],
+              display: ['"Outfit"', "sans-serif"],
+            },
+            colors: {
+              surface: { 50: "#f8fafc", 100: "#f1f5f9", 700: "#27272f", 800: "#1e1e24", 900: "#16161a", 950: "#0f0f11" },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #0f0f11;
+        overflow-x: hidden;
+        cursor: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      button, a, input, select, textarea, [role="button"], .cursor-pointer {
+        cursor: none !important;
+      }
+
+      @media (pointer: coarse) {
+        body { cursor: auto !important; }
+        button, a, input, select, textarea, [role="button"], .cursor-pointer {
+          cursor: pointer !important;
+        }
+        #cursor-dot, #cursor-ring {
+          display: none !important;
+        }
+      }
+
+      html, body { scrollbar-width: none; -ms-overflow-style: none; }
+      ::-webkit-scrollbar { display: none; }
+
+      .logo-gradient {
+        background: linear-gradient(135deg, #ff1744 0%, #f43f5e 35%, #c084fc 70%, #a855f7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .frosted-glass {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.01) 100%);
+        backdrop-filter: blur(40px) saturate(180%);
+        -webkit-backdrop-filter: blur(40px) saturate(180%);
+        border: 1px solid rgba(168, 85, 247, 0.45);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(168, 85, 247, 0.2);
+        animation: floatCard 6s ease-in-out infinite;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+      }
+      .frosted-glass:hover {
+        border-color: rgba(255, 23, 68, 0.6);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(255, 23, 68, 0.25);
+      }
+
+      @keyframes floatCard {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.7; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.03); }
+      }
+
+      @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .animate-fade-in-down {
+        animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+        opacity: 0;
+      }
+
+      .badge-red-outline {
+        background: linear-gradient(to bottom, rgba(255, 23, 68, 0.1) 0%, rgba(255, 23, 68, 0.02) 100%);
+        backdrop-filter: blur(40px) saturate(180%);
+        -webkit-backdrop-filter: blur(40px) saturate(180%);
+        border: 1px solid rgba(255, 23, 68, 0.75);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 23, 68, 0.25);
+        animation: pulseGlow 3s ease-in-out infinite;
+      }
+
+      .header-btn {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
+        backdrop-filter: blur(40px) saturate(180%);
+        -webkit-backdrop-filter: blur(40px) saturate(180%);
+        border: 1px solid rgba(168, 85, 247, 0.4);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .header-btn:hover {
+        border-color: rgba(255, 23, 68, 0.8);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 23, 68, 0.25);
+        background-color: rgba(255, 23, 68, 0.08);
+        transform: translateY(-2px);
+      }
+
+      #cursor-dot, #cursor-ring {
+        pointer-events: none;
+        position: fixed;
+        top: 0; left: 0;
+        border-radius: 50%;
+        z-index: 9999;
+        will-change: transform;
+      }
+      #cursor-dot {
+        width: 8px; height: 8px;
+        background-color: #a855f7;
+        transform: translate(-50%, -50%);
+        transition: background-color 0.25s ease, transform 0.1s ease;
+      }
+      #cursor-ring {
+        width: 36px; height: 36px;
+        border: 1.5px solid rgba(255, 23, 68, 0.8);
+        transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1), height 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, background-color 0.25s ease;
+        transform: translate(-50%, -50%);
+      }
+      body.cursor-hover #cursor-dot { background-color: #c084fc; transform: translate(-50%, -50%) scale(1.5); }
+      body.cursor-hover #cursor-ring {
+        width: 56px; height: 56px;
+        border-color: #ff1744;
+        background-color: rgba(255, 23, 68, 0.12);
+      }
+
+      .magnetic-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        will-change: transform;
+        transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+    </style>
+  </head>
+  <body class="text-slate-300 font-sans min-h-screen relative flex flex-col justify-between">
+
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- Node-Link Particle Background Canvas -->
+    <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none -z-50"></canvas>
+
+    <!-- Navigation Bar -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-[8000] py-5 px-6 animate-fade-in-down">
+      <nav class="max-w-6xl mx-auto flex items-center justify-between gap-4">
+        <div class="font-display font-extrabold text-2xl tracking-tight logo-gradient flex items-center gap-3 cursor-pointer select-none flex-shrink-0 transition-transform hover:scale-105" onclick="window.location.href='/'">
+          <img src="https://avatars.githubusercontent.com/u/246972150?v=4&size=460" alt="Sapphire Logo" class="w-8 h-8 object-cover" />
+          <span>Sapphire</span>
+        </div>
+        <div class="flex-shrink-0">
+          <button onclick="window.open('https://sapphire-ai-web.vercel.app/', '_blank')" class="magnetic-btn badge-red-outline px-4 py-2 rounded-full text-sm font-medium text-rose-500 hover:text-rose-400 shadow-lg">Web App</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN 404 CONTENT -->
+    <main class="w-full flex-grow flex items-center justify-center px-4 py-28 animate-fade-in-up">
+      <div class="frosted-glass p-8 sm:p-10 rounded-[32px] max-w-xl w-full text-left space-y-6 shadow-2xl relative overflow-hidden">
+        
+        <!-- Ambient Background Glow Inside Card -->
+        <div class="absolute -top-24 -right-24 w-48 h-48 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-rose-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-red-outline text-xs font-semibold uppercase text-rose-400 tracking-wider relative z-10">
+          <i class="fa-solid fa-triangle-exclamation text-rose-500 animate-bounce"></i> Error 404
+        </div>
+        
+        <h1 class="text-3xl sm:text-4xl font-display font-extrabold logo-gradient tracking-tight relative z-10">
+          404 Not Found
+        </h1>
+        
+        <p class="text-slate-300 text-sm sm:text-base font-normal leading-relaxed relative z-10">
+          The requested path does not exist on Sapphire AI.
+        </p>
+
+        <!-- Agent Recovery Sitemap Section -->
+        <div class="pt-4 border-t border-purple-500/30 space-y-3 relative z-10">
+          <div class="text-xs font-mono uppercase tracking-widest text-purple-400 font-semibold flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-purple-500 animate-ping"></span> # Agent Recovery Sitemap
+          </div>
+          <p class="text-xs text-slate-400 font-mono leading-relaxed">
+            If you are an autonomous agent looking for resources, please check the following:
+          </p>
+          <ul class="space-y-2.5 font-sans text-sm pt-1">
+            <li>
+              <a href="/" class="magnetic-btn header-btn px-4 py-3 rounded-xl text-slate-200 hover:text-rose-400 flex items-center justify-between w-full">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-house text-purple-400"></i> Homepage</span>
+                <span class="text-xs text-slate-400 font-mono">/</span>
+              </a>
+            </li>
+            <li>
+              <a href="/llms.txt" class="magnetic-btn header-btn px-4 py-3 rounded-xl text-slate-200 hover:text-rose-400 flex items-center justify-between w-full">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-purple-400"></i> Agent Instructions &amp; LLMs</span>
+                <span class="text-xs text-slate-400 font-mono">/llms.txt</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://sapphire-ai-web.vercel.app/" target="_blank" class="magnetic-btn header-btn px-4 py-3 rounded-xl text-slate-200 hover:text-rose-400 flex items-center justify-between w-full">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-globe text-purple-400"></i> Web Application</span>
+                <span class="text-xs text-slate-400 font-mono">external</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full py-6 text-center text-xs text-slate-400 bg-surface-950/80 relative z-10 border-t border-purple-500/10">
+      <p>© 2026 Sapphire AI. All rights reserved.</p>
+    </footer>
+
+    <!-- INTERACTIVE ENGINE JAVASCRIPT -->
+    <script>
+      // Node-Link Constellation Background Canvas
+      const canvas = document.getElementById('bg-canvas');
+      const ctx = canvas.getContext('2d');
+      let width = canvas.width = window.innerWidth;
+      let height = canvas.height = window.innerHeight;
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const particles = [];
+      const particleCount = Math.min(Math.floor((width * height) / 14000), 80);
+      const logoColors = ['#ff1744', '#f43f5e', '#fb7185', '#c084fc', '#a855f7', '#d8b4fe'];
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.6,
+          vy: (Math.random() - 0.5) * 0.6,
+          radius: Math.random() * 2.2 + 1,
+          color: logoColors[Math.floor(Math.random() * logoColors.length)]
+        });
+      }
+
+      function animateParticles() {
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 150) {
+              const alpha = (1 - (dist / 150)) * 0.25;
+              ctx.strokeStyle = (i + j) % 2 === 0 ? `rgba(244, 63, 94, ${alpha})` : `rgba(168, 85, 247, ${alpha})`;
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.stroke();
+            }
+          }
+        }
+
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < 0 || p.x > width) p.vx *= -1;
+          if (p.y < 0 || p.y > height) p.vy *= -1;
+
+          ctx.fillStyle = p.color;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        requestAnimationFrame(animateParticles);
+      }
+      animateParticles();
+
+      // Custom Cursor Mechanics
+      const cursorDot = document.getElementById('cursor-dot');
+      const cursorRing = document.getElementById('cursor-ring');
+      let mouseX = 0, mouseY = 0;
+      let ringX = 0, ringY = 0;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+      });
+
+      function renderCursor() {
+        ringX += (mouseX - ringX) * 0.2;
+        ringY += (mouseY - ringY) * 0.2;
+        cursorRing.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+        requestAnimationFrame(renderCursor);
+      }
+      renderCursor();
+
+      document.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+      });
+    </script>
+  </body>
 </html>
