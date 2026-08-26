@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sapphire-ai.netlify.app/</loc>
+    <loc>https://sapphire-ai.vercel.app/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sapphire-ai.netlify.app/download</loc>
+    <loc>https://sapphire-ai.vercel.app/download</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sapphire-ai.netlify.app/about</loc>
+    <loc>https://sapphire-ai.vercel.app/about</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://sapphire-ai.netlify.app/contact</loc>
+    <loc>https://sapphire-ai.vercel.app/contact</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sapphire-ai.netlify.app/privacy</loc>
+    <loc>https://sapphire-ai.vercel.app/privacy</loc>
     <priority>0.5</priority>
   </url>
 </urlset>
