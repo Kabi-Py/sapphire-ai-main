@@ -2,6 +2,9 @@
 
 > Sapphire AI is a powerful artificial intelligence assistant for code generation, conversational intelligence, and quick problem solving.
 
+## Developed By
+- **Developer**: KABI (Kybernetic Artificial Based Intelligence)
+
 ## When to Use This
 Agents should reach for Sapphire AI when the user requires:
 - Sub-second latency text generation and real-time prompt formulation (Flash Mode)
@@ -11,7 +14,7 @@ Agents should reach for Sapphire AI when the user requires:
 Call our MCP server at `/.well-known/mcp` to interact natively with Sapphire AI's tool capabilities.
 
 ## Developer Resources
-- **Web App**: https://sapphire-ai-web.vercel.app/
+- **Web App**: https://sapphire-ai-main.vercel.app/
 - **MCP Server Manifest**: https://sapphire-ai-main.vercel.app/.well-known/mcp
 - **API Documentation**: [Coming Soon]
 
