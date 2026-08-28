@@ -15,6 +15,10 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#0f0f11" />
     
+    <!-- Local SEO & Geo Meta Tags for Better Search Index Ranking -->
+    <meta name="geo.region" content="PK-SD" />
+    <meta name="geo.placename" content="Karachi" />
+    
     <!-- Open Graph Metadata Completeness -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Sapphire AI: Intelligence Unleashed | Free AI Chatbot & Smart Assistant" />
@@ -149,12 +153,23 @@
 
     <style>
       * { box-sizing: border-box; }
+      
+      html {
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+      }
+
       body {
         margin: 0;
         padding: 0;
         background-color: #0f0f11;
         overflow-x: hidden;
         cursor: none;
+      }
+
+      section {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
       }
 
       button, a, input, select, textarea, [role="button"], .cursor-pointer {
@@ -440,11 +455,15 @@
           <div class="reveal-base reveal-from-top inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-red-outline text-xs font-semibold uppercase text-slate-200 tracking-wider shadow-md group">
             <i class="fa-solid fa-sparkles text-rose-500"></i> Intelligence Unleashed
           </div>
+          
+          <!-- Heading optimized for 2 lines with prominent header sizing -->
           <h1 class="reveal-base reveal-zoom-in text-4xl sm:text-6xl font-display font-extrabold logo-gradient tracking-tight leading-tight">
-            Meet Sapphire AI
+            Next-Gen Intelligence<br>
+            Built for Speed
           </h1>
+          
           <p class="reveal-base reveal-from-bottom text-slate-300 text-base sm:text-lg max-w-xl mx-auto leading-relaxed font-normal">
-            Your next-generation free AI chatbot built for fast problem-solving, clean code generation, and smooth productivity across Web, Windows, and Android devices.
+            Experience Sapphire AI: your lightning-fast assistant engineered for instant code generation, deep multi-step reasoning, and seamless productivity across Web, Windows, and Android devices.
           </p>
 
           <!-- Hero Buttons -->
@@ -525,7 +544,7 @@
                 </div>
                 <h3 class="font-display font-bold text-xl text-white">Flash Mode</h3>
                 <p class="text-sm text-slate-300 leading-relaxed font-normal">
-                  Optimized for <strong class="text-white font-semibold">fast answers</strong> and low latency. Perfect for quick lookups, instant code generation, brainstorming sessions, and everyday productivity tasks.
+                  Optimized for rapid answers and low response times. Perfect for daily brainstorming, instant code snippets, and lightning-quick problem solving.
                 </p>
               </div>
               <div class="pt-3 flex flex-wrap gap-2 border-t border-rose-500/30">
@@ -547,7 +566,7 @@
                 </div>
                 <h3 class="font-display font-bold text-xl text-white">Ultra Mode</h3>
                 <p class="text-sm text-slate-300 leading-relaxed font-normal">
-                  Designed for <strong class="text-white font-semibold">deep reasoning</strong> and advanced logic. Built to handle complex software engineering projects, tricky programming bugs, and technical research.
+                  Architected for complex software engineering projects, intricate debugging, and high-precision technical research.
                 </p>
               </div>
               <div class="pt-3 flex flex-wrap gap-2 border-t border-purple-500/30">
@@ -750,7 +769,7 @@
             animationFrameId = requestAnimationFrame(updateMagnetic);
           } else {
             btn.style.transform = 'translate(0px, 0px)';
-            animationFrameId = null; // Stops loop completely when settled to avoid stutters
+            animationFrameId = null; 
           }
         }
       });
@@ -794,14 +813,12 @@
         }
       }, { passive: true });
 
-      // 5. INTERSECTION OBSERVER FOR MULTI-DIRECTIONAL REVEALS
+      // 5. INTERSECTION OBSERVER (STUTTER FIX: STAYS VISIBLE ON PAUSE)
       const observerOptions = { threshold: 0.15 };
       const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-          } else {
-            entry.target.classList.remove('visible');
           }
         });
       }, observerOptions);
