@@ -9,7 +9,7 @@
     
     <!-- Primary SEO & Title -->
     <title>Sapphire AI: Intelligence Unleashed | Free AI Chatbot & Code Generator</title>
-    <meta name="description" content="Sapphire AI is a next-generation artificial intelligence assistant built built by KABI for fast code generation, multi-step problem solving, and everyday productivity. Access via Web, Windows, and Android." />
+    <meta name="description" content="Sapphire AI is a next-generation artificial intelligence assistant built by KABI for fast code generation, multi-step problem solving, and everyday productivity. Access via Web, Windows, and Android." />
     <meta name="keywords" content="Sapphire AI, sapphire ai, SapphireAi, sapphireai, SAPPHIRE AI, AI chatbot, artificial intelligence, code generator, free AI assistant, conversational AI, Sapphire assistant, machine learning app, chat gpt, image generator, AI code generator, free AI chatbot, conversational intelligence, AI assistant for coding, Flash AI mode, Ultra AI mode, Vercel AI app, Python AI assistant, best free ai" />
     <meta name="author" content="Sapphire AI" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -223,12 +223,12 @@
         backdrop-filter: blur(40px) saturate(180%);
         -webkit-backdrop-filter: blur(40px) saturate(180%);
         border: 1px solid rgba(168, 85, 247, 0.4);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(168, 85, 247, 0.12);
-        transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: none;
+        transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .header-btn:hover {
         border-color: rgba(168, 85, 247, 0.85);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(168, 85, 247, 0.3);
+        box-shadow: none;
         background-color: rgba(168, 85, 247, 0.1);
       }
 
@@ -424,24 +424,24 @@
 
     <!-- Navigation Bar -->
     <header id="navbar" class="fixed top-0 left-0 w-full z-[8000] transition-all duration-400 ease-out py-5 px-6">
-      <nav class="max-w-6xl mx-auto flex items-center justify-between gap-4">
+      <nav class="max-w-6xl mx-auto relative flex items-center justify-between">
         <!-- Logo -->
         <div class="font-display font-extrabold text-2xl tracking-tight logo-gradient flex items-center gap-3 cursor-pointer select-none flex-shrink-0" onclick="navigateTo('home')">
           <img src="https://avatars.githubusercontent.com/u/246972150?v=4&size=460" alt="Sapphire AI Logo - Free AI Chatbot and Code Generator" class="w-8 h-8 rounded-full object-cover" />
           <span>Sapphire AI</span>
         </div>
         
-        <!-- Center Nav Links -->
-        <div class="hidden md:flex items-center gap-2">
+        <!-- Center Nav Links (Absolute Centered) -->
+        <div class="hidden md:flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
           <button onclick="navigateTo('home')" class="magnetic-btn header-btn px-5 py-2.5 rounded-full text-sm font-medium text-white hover:text-rose-400">Home</button>
           <button onclick="navigateTo('download')" class="magnetic-btn header-btn px-5 py-2.5 rounded-full text-sm font-medium text-white hover:text-rose-400">Download</button>
           <button onclick="navigateTo('features')" class="magnetic-btn header-btn px-5 py-2.5 rounded-full text-sm font-medium text-white hover:text-rose-400">Features</button>
           <button onclick="navigateTo('faq')" class="magnetic-btn header-btn px-5 py-2.5 rounded-full text-sm font-medium text-white hover:text-rose-400">FAQ</button>
         </div>
 
-        <!-- Right Action Button -->
+        <!-- Right Action Button (Original Position) -->
         <div class="flex-shrink-0">
-          <button onclick="window.open('https://sapphire-ai-web.vercel.app/', '_blank')" class="magnetic-btn badge-red-outline px-5 py-2.5 rounded-full text-sm font-medium text-rose-500 hover:text-rose-400 shadow-lg">Web App</button>
+          <button onclick="window.open('https://sapphire-ai-web.vercel.app/', '_blank')" class="magnetic-btn badge-red-outline px-5 py-2.5 rounded-full text-sm font-medium text-rose-500 hover:text-rose-400" style="box-shadow: none;">Web App</button>
         </div>
       </nav>
     </header>
@@ -456,7 +456,6 @@
             <i class="fa-solid fa-sparkles text-rose-500"></i> Intelligence Unleashed
           </div>
           
-          <!-- Heading optimized for 2 lines with prominent header sizing -->
           <h1 class="reveal-base reveal-zoom-in text-4xl sm:text-6xl font-display font-extrabold logo-gradient tracking-tight leading-tight">
             Next-Gen Intelligence<br>
             Built for Speed
@@ -466,7 +465,6 @@
             Experience Sapphire AI: your lightning-fast assistant engineered for instant code generation, deep multi-step reasoning, and seamless productivity across Web, Windows, and Android devices.
           </p>
 
-          <!-- Hero Buttons -->
           <div class="reveal-base reveal-from-bottom pt-2 flex flex-wrap items-center justify-center gap-4">
             <button onclick="navigateTo('download')" class="magnetic-btn px-7 py-4 text-sm rounded-xl bg-gradient-to-r from-rose-600 to-rose-500 text-white font-bold shadow-lg shadow-rose-600/30 hover:from-rose-500 hover:to-rose-400 hover:shadow-rose-600/50 transition-all duration-300 cursor-pointer">
               Get Started Free
@@ -495,7 +493,6 @@
                 <span class="inline-block text-xs font-mono text-slate-200 badge-purple-outline px-3.5 py-1.5 rounded-full mt-1.5"><i class="fa-solid fa-code card-icon mr-2.5"></i>v1.0 stable</span>
               </div>
 
-              <!-- Download Card Buttons -->
               <div style="transform: translateZ(35px);" class="space-y-4">
                 <button type="button" onclick="window.open('https://sapphire-ai-web.vercel.app/', '_blank')" class="magnetic-btn w-full py-4 px-6 download-web-app-btn text-white font-bold rounded-2xl transition-all duration-300 text-center flex items-center justify-center gap-2.5 active:scale-95 cursor-pointer shadow-md text-base">
                   <i class="fa-solid fa-globe text-lg card-icon"></i>
@@ -534,10 +531,10 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-          <div class="reveal-base reveal-from-left">
-            <div class="flash-card p-6 sm:p-8 rounded-3xl transition-all duration-400 space-y-4 flex flex-col justify-between h-full group">
+          <div class="reveal-base reveal-from-left h-full">
+            <div class="flash-card p-6 sm:p-8 rounded-3xl transition-all duration-400 space-y-6 flex flex-col justify-between h-full group">
               <div class="space-y-4">
-                <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/50 flex items-center justify-center text-rose-500 text-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
+                <div class="w-12 h-12 rounded-2xl bg-rose-500/15 border border-rose-500/40 flex items-center justify-center text-rose-500 text-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
                   </svg>
@@ -548,16 +545,16 @@
                 </p>
               </div>
               <div class="pt-3 flex flex-wrap gap-2 border-t border-rose-500/30">
-                <span class="text-xs font-mono px-3.5 py-1.5 rounded-full bg-rose-500/10 text-slate-200 border border-rose-500/30"><i class="fa-solid fa-bolt mr-1.5 text-rose-500"></i> Fast Response</span>
-                <span class="text-xs font-mono px-3.5 py-1.5 rounded-full bg-white/5 text-slate-200 border border-white/10"><i class="fa-solid fa-rocket mr-1.5 text-rose-500"></i> Daily Tasks</span>
+                <span class="text-xs font-mono px-3.5 py-1.5 rounded-full bg-rose-500/10 text-slate-200 border border-rose-500/30 inline-flex items-center"><i class="fa-solid fa-bolt mr-1.5 text-rose-500"></i> Fast Response</span>
+                <span class="text-xs font-mono px-3.5 py-1.5 rounded-full bg-white/5 text-slate-200 border border-white/10 inline-flex items-center"><i class="fa-solid fa-rocket mr-1.5 text-rose-500"></i> Daily Tasks</span>
               </div>
             </div>
           </div>
 
-          <div class="reveal-base reveal-from-right">
-            <div class="ultra-card p-6 sm:p-8 rounded-3xl transition-all duration-400 space-y-4 flex flex-col justify-between h-full group">
+          <div class="reveal-base reveal-from-right h-full">
+            <div class="ultra-card p-6 sm:p-8 rounded-3xl transition-all duration-400 space-y-6 flex flex-col justify-between h-full group">
               <div class="space-y-4">
-                <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
+                <div class="w-12 h-12 rounded-2xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path>
                     <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path>
@@ -570,8 +567,8 @@
                 </p>
               </div>
               <div class="pt-3 flex flex-wrap gap-2 border-t border-purple-500/30">
-                <span class="text-xs font-mono px-3.5 py-1.5 rounded-full bg-purple-500/10 text-slate-200 border border-purple-500/30"><i class="fa-solid fa-brain mr-1.5 text-purple-400"></i> Deep Logic</span>
-                <span class="text-xs font-mono px-3.5 py-1.5 rounded-full bg-white/5 text-slate-200 border border-white/10"><i class="fa-solid fa-code mr-1.5 text-purple-400"></i> Code Projects</span>
+                <span class="text-xs font-mono px-3.5 py-1.5 rounded-full bg-purple-500/10 text-slate-200 border border-purple-500/30 inline-flex items-center"><i class="fa-solid fa-brain mr-1.5 text-purple-400"></i> Deep Logic</span>
+                <span class="text-xs font-mono px-3.5 py-1.5 rounded-full bg-white/5 text-slate-200 border border-white/10 inline-flex items-center"><i class="fa-solid fa-code mr-1.5 text-purple-400"></i> Code Projects</span>
               </div>
             </div>
           </div>
@@ -822,7 +819,7 @@
         }
       }, { passive: true });
 
-      // 5. INTERSECTION OBSERVER (STUTTER FIX: STAYS VISIBLE ON PAUSE)
+      // 5. INTERSECTION OBSERVER
       const observerOptions = { threshold: 0.15 };
       const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
