@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    
+    <!-- Primary SEO & Title -->
+    <title>Sapphire AI: Privacy Policy | Data Protection & Security</title>
+    <meta name="description" content="Read the Privacy Policy for Sapphire AI, built by KABI. Learn how we handle your data securely across Web, Windows, and Android." />
+    <meta name="keywords" content="Sapphire AI privacy policy, data protection, KABI developer, secure AI chat, privacy terms" />
+    <meta name="author" content="Sapphire AI" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0f0f11" />
+    
+    <!-- Local SEO & Geo Meta Tags -->
+    <meta name="geo.region" content="PK-SD" />
+    <meta name="geo.placename" content="Karachi" />
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://avatars.githubusercontent.com/u/246972150?v=4&size=32" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://avatars.githubusercontent.com/u/246972150?v=4&size=180" />
+
+    <!-- Tailwind CSS & Font Awesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Inter"', "sans-serif"],
+              display: ['"Outfit"', "sans-serif"],
+            },
+            colors: {
+              surface: { 50: "#f8fafc", 100: "#f1f5f9", 700: "#27272f", 800: "#1e1e24", 900: "#16161a", 950: "#0f0f11" },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      * { box-sizing: border-box; }
+      
+      html {
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #0f0f11;
+        overflow-x: hidden;
+        cursor: none;
+      }
+
+      section {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+
+      button, a, input, select, textarea, [role="button"], .cursor-pointer {
+        cursor: none !important;
+      }
+
+      @media (pointer: coarse) {
+        body { cursor: auto !important; }
+        button, a, input, select, textarea, [role="button"], .cursor-pointer {
+          cursor: pointer !important;
+        }
+        #cursor-dot, #cursor-ring {
+          display: none !important;
+        }
+      }
+
+      html, body { scrollbar-width: none; -ms-overflow-style: none; }
+      ::-webkit-scrollbar { display: none; }
+
+      .logo-gradient {
+        background: linear-gradient(135deg, #ff1744 0%, #f43f5e 35%, #c084fc 70%, #a855f7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .header-btn {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
+        backdrop-filter: blur(40px) saturate(180%);
+        -webkit-backdrop-filter: blur(40px) saturate(180%);
+        border: 1px solid rgba(168, 85, 247, 0.4);
+        box-shadow: none;
+        transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .header-btn:hover {
+        border-color: rgba(168, 85, 247, 0.85);
+        box-shadow: none;
+        background-color: rgba(168, 85, 247, 0.1);
+      }
+
+      .badge-red-outline {
+        background: linear-gradient(to bottom, rgba(255, 23, 68, 0.08) 0%, rgba(255, 23, 68, 0.01) 100%);
+        backdrop-filter: blur(40px) saturate(180%);
+        -webkit-backdrop-filter: blur(40px) saturate(180%);
+        border: 1px solid rgba(255, 23, 68, 0.7);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 23, 68, 0.25);
+        transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .badge-red-outline:hover {
+        border-color: rgba(255, 23, 68, 0.95);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(255, 23, 68, 0.45);
+        background-color: rgba(255, 23, 68, 0.1);
+      }
+
+      /* Flash Card Style */
+      .flash-card {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
+        backdrop-filter: blur(40px) saturate(180%);
+        -webkit-backdrop-filter: blur(40px) saturate(180%);
+        border: 1px solid rgba(255, 23, 68, 0.7);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 23, 68, 0.25);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .flash-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 23, 68, 0.95);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(255, 23, 68, 0.45);
+      }
+
+      /* Ultra Card Style */
+      .ultra-card {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
+        backdrop-filter: blur(40px) saturate(180%);
+        -webkit-backdrop-filter: blur(40px) saturate(180%);
+        border: 1px solid rgba(168, 85, 247, 0.4);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(168, 85, 247, 0.15);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .ultra-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(168, 85, 247, 0.85);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(168, 85, 247, 0.35);
+      }
+
+      .navbar-blend {
+        background: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+      }
+      .navbar-blend::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(15, 15, 17, 0.92) 0%, rgba(15, 15, 17, 0.1) 100%);
+        backdrop-filter: blur(25px) saturate(180%);
+        -webkit-backdrop-filter: blur(25px) saturate(180%);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      #cursor-dot, #cursor-ring {
+        pointer-events: none;
+        position: fixed;
+        top: 0; left: 0;
+        border-radius: 50%;
+        z-index: 9999;
+        will-change: transform;
+      }
+      #cursor-dot {
+        width: 8px; height: 8px;
+        background-color: #a855f7;
+        transform: translate(-50%, -50%);
+        transition: background-color 0.25s ease;
+      }
+      #cursor-ring {
+        width: 36px; height: 36px;
+        border: 1.5px solid rgba(255, 23, 68, 0.8);
+        transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1), height 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, background-color 0.25s ease;
+        transform: translate(-50%, -50%);
+      }
+      body.cursor-hover #cursor-dot { background-color: #c084fc; }
+      body.cursor-hover #cursor-ring {
+        width: 52px; height: 52px;
+        border-color: #ff1744;
+        background-color: rgba(255, 23, 68, 0.12);
+      }
+
+      .page-transition-overlay {
+        position: fixed; inset: 0;
+        background-color: #0f0f11;
+        z-index: 9000;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .page-transition-overlay.active { opacity: 1; pointer-events: auto; }
+
+      .reveal-base {
+        opacity: 0;
+        transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+      }
+      .reveal-base.visible {
+        opacity: 1;
+        transform: translate(0, 0) scale(1) rotate(0deg);
+      }
+      .reveal-from-top { transform: translateY(-70px); }
+      .reveal-from-bottom { transform: translateY(70px); }
+      .reveal-from-left { transform: translateX(-80px); }
+      .reveal-from-right { transform: translateX(80px); }
+      .reveal-zoom-in { transform: scale(0.75); }
+
+      .magnetic-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        will-change: transform;
+      }
+    </style>
+  </head>
+  <body class="text-slate-300 font-sans min-h-screen relative flex flex-col justify-between">
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 z-[9500] transition-all duration-150 ease-out" style="width: 0%; background: linear-gradient(135deg, #ff1744 0%, #f43f5e 35%, #c084fc 70%, #a855f7 100%);"></div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- Page Transition Mask -->
+    <div id="transition-overlay" class="page-transition-overlay"></div>
+
+    <!-- Node-Link Particle Background Canvas -->
+    <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none -z-50"></canvas>
+
+    <!-- Navigation Bar -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-[8000] transition-all duration-400 ease-out py-5 px-6">
+      <nav class="max-w-6xl mx-auto relative flex items-center justify-between">
+        <!-- Logo -->
+        <div class="font-display font-extrabold text-2xl tracking-tight logo-gradient flex items-center gap-3 cursor-pointer select-none flex-shrink-0" onclick="window.location.href='index.html'">
+          <img src="https://avatars.githubusercontent.com/u/246972150?v=4&size=460" alt="Sapphire AI Logo" class="w-8 h-8 rounded-full object-cover" />
+          <span>Sapphire AI</span>
+        </div>
+        
+        <!-- Center Nav Links (Absolute Centered) -->
+        <div class="hidden md:flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
+          <button onclick="window.location.href='index.html#home'" class="magnetic-btn header-btn px-5 py-2.5 rounded-full text-sm font-medium text-white hover:text-rose-400">Home</button>
+          <button onclick="window.location.href='index.html#download'" class="magnetic-btn header-btn px-5 py-2.5 rounded-full text-sm font-medium text-white hover:text-rose-400">Download</button>
+          <button onclick="window.location.href='index.html#features'" class="magnetic-btn header-btn px-5 py-2.5 rounded-full text-sm font-medium text-white hover:text-rose-400">Features</button>
+          <button onclick="window.location.href='index.html#faq'" class="magnetic-btn header-btn px-5 py-2.5 rounded-full text-sm font-medium text-white hover:text-rose-400">FAQ</button>
+        </div>
+
+        <!-- Right Action Button -->
+        <div class="flex-shrink-0">
+          <button onclick="window.open('https://sapphire-ai-web.vercel.app/', '_blank')" class="magnetic-btn badge-red-outline px-5 py-2.5 rounded-full text-sm font-medium text-rose-500 hover:text-rose-400" style="box-shadow: none;">Web App</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN VIEW CONTAINER -->
+    <main class="w-full flex-grow pt-28 pb-16">
+
+      <!-- ================= PRIVACY HEADER SECTION ================= -->
+      <section class="min-h-[30vh] flex flex-col items-center justify-center relative px-4 text-center py-10">
+        <div class="space-y-4 max-w-3xl mx-auto">
+          <div class="reveal-base reveal-from-top inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-red-outline text-xs font-semibold uppercase text-slate-200 tracking-wider shadow-md">
+            <i class="fa-solid fa-shield-halved text-rose-500"></i> Trust &amp; Transparency
+          </div>
+          
+          <h1 class="reveal-base reveal-zoom-in text-4xl sm:text-5xl font-display font-extrabold logo-gradient tracking-tight leading-tight">
+            Privacy Policy
+          </h1>
+          
+          <p class="reveal-base reveal-from-bottom text-slate-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-normal">
+            Sapphire AI, developed by KABI, is dedicated to safeguarding your personal data across Web, Windows, and Android platforms.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= PRIVACY CARDS SECTION (1 Above, 2 Below) ================= -->
+      <section class="max-w-4xl mx-auto px-4 py-10 w-full space-y-6">
+        
+        <!-- CARD 1 (ABOVE - Ultra Card Style) -->
+        <div class="reveal-base reveal-from-top w-full">
+          <div class="ultra-card p-8 sm:p-9 rounded-3xl space-y-4 group">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6 flex-shrink-0">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h2 class="font-display font-bold text-2xl text-white">1. Information Collection &amp; Usage</h2>
+            </div>
+            
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+              When you use Sapphire AI's code generator or conversational interfaces across our Web, Windows, or Android apps, we only process prompt text and runtime preferences necessary to deliver accurate multi-step problem solving. We do not sell, trade, or distribute your private conversations to external third parties.
+            </p>
+
+            <div class="pt-2 flex flex-row flex-nowrap items-center gap-2 border-t border-purple-500/30 overflow-x-auto">
+              <span class="text-[11px] sm:text-xs font-mono px-2.5 sm:px-3.5 py-1.5 rounded-full bg-purple-500/10 text-slate-200 border border-purple-500/30 whitespace-nowrap"><i class="fa-solid fa-lock mr-1.5 text-purple-400"></i> Secure Processing</span>
+              <span class="text-[11px] sm:text-xs font-mono px-2.5 sm:px-3.5 py-1.5 rounded-full bg-white/5 text-slate-200 border border-white/10 whitespace-nowrap"><i class="fa-solid fa-user-shield mr-1.5 text-purple-400"></i> Zero Data Selling</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- LOWER GRID CARDS (2 BELOW - Flash Card & Ultra Card Style) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+          
+          <!-- CARD 2 (BOTTOM LEFT - Flash Card Style) -->
+          <div class="reveal-base reveal-from-left">
+            <div class="flash-card p-6 sm:p-8 rounded-3xl space-y-4 flex flex-col justify-between h-full group">
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/50 flex items-center justify-center text-rose-500 text-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6 flex-shrink-0">
+                    <i class="fa-solid fa-user-lock"></i>
+                  </div>
+                  <h3 class="font-display font-bold text-xl text-white">2. User Rights &amp; Control</h3>
+                </div>
+                <p class="text-sm text-slate-300 leading-relaxed font-normal">
+                  You maintain full autonomy over your account data, chat logs, and preferences. You may request complete deletion of your session history or modify your platform settings directly through the app interface at any time.
+                </p>
+              </div>
+              <div class="pt-3 flex flex-wrap gap-2 border-t border-rose-500/30">
+                <span class="text-xs font-mono px-3.5 py-1.5 rounded-full bg-rose-500/10 text-slate-200 border border-rose-500/30"><i class="fa-solid fa-bolt mr-1.5 text-rose-500"></i> Instant Deletion</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 (BOTTOM RIGHT - Ultra Card Style) -->
+          <div class="reveal-base reveal-from-right">
+            <div class="ultra-card p-6 sm:p-8 rounded-3xl space-y-4 flex flex-col justify-between h-full group">
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6 flex-shrink-0">
+                    <i class="fa-solid fa-envelope-circle-check"></i>
+                  </div>
+                  <h3 class="font-display font-bold text-xl text-white">3. Contact &amp; Inquiries</h3>
+                </div>
+                <p class="text-sm text-slate-300 leading-relaxed font-normal">
+                  Sapphire AI is engineered in Karachi, Sindh by KABI. For any questions regarding privacy practices, security compliance, or data support, you can reach out directly via support email at <strong class="text-white">scytherkalhoro@gmail.com</strong>.
+                </p>
+              </div>
+              <div class="pt-3 flex flex-wrap gap-2 border-t border-purple-500/30">
+                <span class="text-xs font-mono px-3.5 py-1.5 rounded-full bg-purple-500/10 text-slate-200 border border-purple-500/30"><i class="fa-solid fa-envelope mr-1.5 text-purple-400"></i> Direct Support</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full py-6 bg-transparent relative z-10">
+      <div class="max-w-6xl mx-auto px-6 flex justify-center items-center">
+        <a 
+          href="https://www.google.com/preferences/source?q=https://sapphire-ai-main.vercel.app" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="magnetic-btn bg-transparent border border-purple-500/30 px-4 py-2 rounded-full text-xs font-medium text-purple-300 hover:text-white hover:border-purple-500/70 transition-all inline-flex items-center gap-2"
+        >
+          <i class="fa-solid fa-square-rss text-rose-500"></i> Add as Preferred Source
+        </a>
+      </div>
+    </footer>
+
+    <!-- INTERACTIVE ENGINE JAVASCRIPT -->
+    <script>
+      // 1. CANVAS PARTICLE NODE-LINK CONSTELLATION EFFECT
+      const canvas = document.getElementById('bg-canvas');
+      const ctx = canvas.getContext('2d');
+      let width = canvas.width = window.innerWidth;
+      let height = canvas.height = window.innerHeight;
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const particles = [];
+      const particleCount = Math.min(Math.floor((width * height) / 14000), 75);
+      const logoColors = ['#ff1744', '#f43f5e', '#fb7185', '#c084fc', '#a855f7', '#d8b4fe'];
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+          radius: Math.random() * 2 + 1.2,
+          color: logoColors[Math.floor(Math.random() * logoColors.length)]
+        });
+      }
+
+      function animateParticles() {
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 140) {
+              const alpha = (1 - (dist / 140)) * 0.22;
+              const isRedLine = (i + j) % 2 === 0;
+              ctx.strokeStyle = isRedLine ? `rgba(244, 63, 94, ${alpha})` : `rgba(168, 85, 247, ${alpha})`;
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.stroke();
+            }
+          }
+        }
+
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < 0 || p.x > width) p.vx *= -1;
+          if (p.y < 0 || p.y > height) p.vy *= -1;
+
+          ctx.fillStyle = p.color;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        requestAnimationFrame(animateParticles);
+      }
+      animateParticles();
+
+      // 2. CUSTOM CURSOR & SMOOTH MAGNETIC BUTTON PHYSICS
+      const cursorDot = document.getElementById('cursor-dot');
+      const cursorRing = document.getElementById('cursor-ring');
+      let mouseX = 0, mouseY = 0;
+      let ringX = 0, ringY = 0;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+      });
+
+      function renderCursor() {
+        ringX += (mouseX - ringX) * 0.2;
+        ringY += (mouseY - ringY) * 0.2;
+        cursorRing.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+        requestAnimationFrame(renderCursor);
+      }
+      renderCursor();
+
+      const magneticBtns = document.querySelectorAll('.magnetic-btn');
+      magneticBtns.forEach(btn => {
+        let currentX = 0, currentY = 0;
+        let targetX = 0, targetY = 0;
+        let isHovered = false;
+        let animationFrameId = null;
+
+        btn.addEventListener('mousemove', (e) => {
+          const rect = btn.getBoundingClientRect();
+          targetX = (e.clientX - rect.left - rect.width / 2) * 0.1;
+          targetY = (e.clientY - rect.top - rect.height / 2) * 0.1;
+          isHovered = true;
+          document.body.classList.add('cursor-hover');
+          
+          if (!animationFrameId) {
+            updateMagnetic();
+          }
+        });
+
+        btn.addEventListener('mouseleave', () => {
+          targetX = 0;
+          targetY = 0;
+          isHovered = false;
+          document.body.classList.remove('cursor-hover');
+          
+          if (!animationFrameId) {
+            updateMagnetic();
+          }
+        });
+
+        function updateMagnetic() {
+          currentX += (targetX - currentX) * 0.12;
+          currentY += (targetY - currentY) * 0.12;
+
+          if (Math.abs(currentX) > 0.05 || Math.abs(currentY) > 0.05 || isHovered) {
+            btn.style.transform = `translate(${currentX.toFixed(2)}px, ${currentY.toFixed(2)}px)`;
+            animationFrameId = requestAnimationFrame(updateMagnetic);
+          } else {
+            btn.style.transform = 'translate(0px, 0px)';
+            animationFrameId = null; 
+          }
+        }
+      });
+
+      // 3. SCROLL PROGRESS BAR & HEADER BLEND EVENT
+      const progressBar = document.getElementById('scroll-progress');
+      const navbar = document.getElementById('navbar');
+
+      window.addEventListener('scroll', () => {
+        const scrollTotal = document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = (scrollTotal / height) * 100;
+        
+        progressBar.style.width = `${scrollPercent}%`;
+
+        if (scrollTotal > 50) {
+          navbar.classList.add('navbar-blend', 'py-3');
+          navbar.classList.remove('py-5');
+        } else {
+          navbar.classList.remove('navbar-blend', 'py-3');
+          navbar.classList.add('py-5');
+        }
+      }, { passive: true });
+
+      // 4. INTERSECTION OBSERVER
+      const observerOptions = { threshold: 0.15 };
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.reveal-base').forEach(el => revealObserver.observe(el));
+    </script>
+  </body>
+</html>
